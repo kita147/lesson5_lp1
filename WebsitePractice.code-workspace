@@ -14,7 +14,7 @@
     "css.format.preserveNewLines": true, // 要素の前にある改行を保持する
     "css.format.spaceAroundSelectorSeparator": false, // セレクタに使われている >、+、~、の記号の前にスペースを入れない
     "editor.bracketPairColorization.enabled": true, // ブラケット（開きかっこと閉じかっこ）のペアを判別しやすくするために色をつける
-    "editor.formatOnSave": false, // ファイル保存時のフォーマッター機能を無効
+    "editor.formatOnSave": true, // ファイル保存時のフォーマッター機能を無効
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": "explicit"
     },

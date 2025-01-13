@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* フォントの指定ここから */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400,500,700,900&family=Noto+Serif+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,700;1,800&display=swap');
+/* フォントの指定ここまで */
+
+
+/* 全体的な設定ここから */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    line-height: 1.375;
+    background-color: #fff;
+    color: #333;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 全体的な設定ここまで */
