@@ -99,44 +99,99 @@ a {
 }
 
 .header__inner {
-    max-width: 120rem;
+    max-width: 34.3rem;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 0 0 1.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
+    height: 7rem;
 }
 
-.header__logo {
-    width: 241px;
-    height: auto;
-    fill: #005BAC;
+@media (min-width: 768px) {
+    .header__inner {
+        max-width: 120rem;
+        padding: 0 2rem;
+        height: 10rem;
+    }
 }
 
-.header__nav--group {
+.hamburger {
+    width: 7rem;
+    height: 7rem;
+    background-color: #005BAC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 2rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    margin: 0.4rem 0;
+    /* スペース調整 */
+    border-radius: 2px;
+}
+
+.header__nav--sp {
+    width: 39rem;
+    height: 33.1rem;
+    position: fixed;
+    top: 7rem;
+    left: 0;
+    background-color: #005BAC;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+
+    .hamburger,
+    .header__nav--sp {
+        display: none;
+    }
+}
+
+
+
+.header__nav--pc {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .header__nav--pc {
+        display: block;
+    }
+}
+
+.header__nav--pc--list {
     display: flex;
     align-items: center;
     column-gap: 4.8rem;
     font-size: 2rem;
 }
 
-.header__nav--group a {
+.header__nav--pc--list a {
     font-weight: 500;
 }
 
-.header__nav--group a:hover {
+.header__nav--pc--list a:hover {
     color: #0A76E2;
 }
 
-.header__button {
+.header__button--pc {
     display: inline-block;
     width: 28.2rem;
     height: 6.1rem;
     font-weight: 700;
     color: #fff;
     background: linear-gradient(to right, #0271E0, #53A2F0);
-
     border-radius: 3.8rem;
     text-align: center;
     line-height: 6.1rem;
@@ -145,7 +200,7 @@ a {
     transition: opacity 0.2s;
 }
 
-.header__button:hover {
+.header__button--pc:hover {
     opacity: 0.7;
     /* 全体を少し透明にして白っぽく */
 }
