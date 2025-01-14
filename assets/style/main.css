@@ -7,10 +7,8 @@
 
 /* コンテンツ幅以下可変レイアウト -----------------------------------------*/
 html {
-    font-size: calc(10 * 100vw / 390);
-    /* 390はSPデザインカンプの幅 */
-    /* 変換サイト・ツールなどで、 390pxの幅での10pxを変換して2.56vwなのでそれを当ててもよい */
-    /* font-size: 2.564102vw; */
+    font-size: calc(10 * 100vw / 343);
+    /* 343はSPデザインカンプの幅 */
 }
 
 @media (min-width:768px) {
@@ -32,7 +30,7 @@ html {
     scroll-padding-top: 5rem;
 }
 
-/* 共通設定 -----------------------------------------*/
+/* 全体的な設定 -----------------------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -45,6 +43,18 @@ body {
     line-height: 1.75;
     background-color: #fff;
     color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 img {
@@ -66,4 +76,76 @@ a {
     color: inherit;
 }
 
-/* 共通設定ここまで */
+
+
+/* 共通クラス -----------------------------------------*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+
+/* ヘッダー -----------------------------------------*/
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__inner {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+}
+
+.header__logo {
+    width: 241px;
+    height: auto;
+    fill: #005BAC;
+}
+
+.header__nav--group {
+    display: flex;
+    align-items: center;
+    column-gap: 4.8rem;
+    font-size: 2rem;
+}
+
+.header__nav--group a {
+    font-weight: 500;
+}
+
+.header__nav--group a:hover {
+    color: #0A76E2;
+}
+
+.header__button {
+    display: inline-block;
+    width: 28.2rem;
+    height: 6.1rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(to right, #0271E0, #53A2F0);
+
+    border-radius: 3.8rem;
+    text-align: center;
+    line-height: 6.1rem;
+    /* ボタンの高さに合わせて中央揃え */
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.header__button:hover {
+    opacity: 0.7;
+    /* 全体を少し透明にして白っぽく */
+}
