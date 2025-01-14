@@ -1,27 +1,48 @@
 @charset "UTF-8";
 
-/* フォントの指定ここから */
+/* フォントの指定 -----------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400,500,700,900&family=Noto+Serif+JP&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,700;1,800&display=swap');
-/* フォントの指定ここまで */
 
 
-/* 全体的な設定ここから */
+/* コンテンツ幅以下可変レイアウト -----------------------------------------*/
+html {
+    font-size: calc(10 * 100vw / 390);
+    /* 390はSPデザインカンプの幅 */
+    /* 変換サイト・ツールなどで、 390pxの幅での10pxを変換して2.56vwなのでそれを当ててもよい */
+    /* font-size: 2.564102vw; */
+}
+
+@media (min-width:768px) {
+    html {
+        font-size: calc(10 * 100vw / 1200);
+        /* 1200はPCカンプのコンテンツ幅 */
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+/* スムーススクロール -----------------------------------------*/
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+/* 共通設定 -----------------------------------------*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    min-height: 100vh;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
-    line-height: 1.375;
+    line-height: 1.75;
     background-color: #fff;
     color: #333;
 }
@@ -45,4 +66,4 @@ a {
     color: inherit;
 }
 
-/* 全体的な設定ここまで */
+/* 共通設定ここまで */
