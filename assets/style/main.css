@@ -277,9 +277,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: skyblue;
     padding: 0;
-    width: 17.5rem;
 }
 
 .main__visual--content-upper {
@@ -289,6 +287,7 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .main__visual--content-upper h2 {
@@ -309,9 +308,49 @@ a {
 }
 
 .main__visual--content-lower h2 {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: #005BAC;
+    line-height: 1.44;
+    letter-spacing: 0;
+}
+
+.main__visual--button-sp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.2rem;
+    background-color: skyblue;
+    padding: 2.4rem 0;
+    text-align: center;
+}
+
+.main__button {
+    display: inline-block;
+    width: 25rem;
+    height: 4.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    background: #333;
+    border-radius: 2.5rem;
+    text-align: center;
+    line-height: 4.8rem;
+    /* ボタンの高さに合わせて中央揃え */
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.color__lightgreen {
+    background-color: #77CB33;
+}
+
+.color__orange {
+    background-color: #F6AA00;
+}
+
+.color__cyan {
+    background-color: #3AC8AD;
 }
 
 /* フッター -----------------------------------------*/
