@@ -32,6 +32,20 @@
     color: #F11F8D;
 }
 
+.font__size--25 {
+    font-size: 2.5rem;
+}
+
+.font__size--36 {
+    font-size: 3.6rem;
+}
+
+.font__size--56 {
+    font-size: 5.6rem;
+}
+
+
+
 /* コンテンツ幅以下可変レイアウト -----------------------------------------*/
 html {
     font-size: calc(10 * 100vw / 343);
@@ -105,13 +119,37 @@ a {
 
 
 
-/* 共通クラス（未使用） -----------------------------------------*/
+/* 共通クラス -----------------------------------------*/
 .common_container {
-    max-width: 120rem;
+    max-width: 37.5rem;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.6rem;
 }
 
+@media (min-width: 768px) {
+    .common_container {
+        max-width: 120rem;
+        padding: 0 2rem;
+    }
+}
+
+.sp {
+    display: block;
+}
+
+.pc {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .sp {
+        display: none;
+    }
+
+    .pc {
+        display: block;
+    }
+}
 
 /* ヘッダー -----------------------------------------*/
 .header {
@@ -145,6 +183,12 @@ a {
 .header__logo img {
     width: 16.6rem;
     color: #005BAC;
+}
+
+@media (min-width: 768px) {
+    .header__logo img {
+        width: 24.1rem;
+    }
 }
 
 .hamburger {
@@ -248,14 +292,19 @@ a {
 
 /* メインビジュアル -----------------------------------------*/
 .main__visual {
-    width: 39rem;
-    /* 固定幅 */
-    height: 25rem;
-    /* 固定高さ */
+    width: 100vw;
+    height: 250px;
     position: relative;
     overflow: hidden;
     /* はみ出た部分を非表示 */
     margin-top: 7rem;
+}
+
+@media (min-width: 768px) {
+    .main__visual {
+        height: 650px;
+        margin-top: 10rem;
+    }
 }
 
 .main__visual-image {
@@ -295,14 +344,6 @@ a {
     line-height: 3.1rem;
 }
 
-.font__size--25 {
-    font-size: 2.5rem;
-}
-
-.font__size--36 {
-    font-size: 3.6rem;
-}
-
 .main__visual--content-lower p {
     font-size: 1.4rem;
 }
@@ -315,14 +356,28 @@ a {
     letter-spacing: 0;
 }
 
+@media (min-width: 768px) {
+    .main__nav {
+        position: relative;
+        top: -4.5rem;
+    }
+}
+
 .main__visual--button-sp {
     display: flex;
     flex-direction: column;
     justify-content: center;
     row-gap: 1.2rem;
-    background-color: skyblue;
     padding: 2.4rem 0;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .main__visual--button-sp {
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 4rem;
+    }
 }
 
 .main__button {
@@ -351,6 +406,24 @@ a {
 
 .color__cyan {
     background-color: #3AC8AD;
+}
+
+/* 選ばれる３つの理由  -----------------------------------------*/
+.main__point h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.main__point span {
+    font-size: 4rem;
+}
+
+.main__point--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3.6rem;
 }
 
 /* フッター -----------------------------------------*/
