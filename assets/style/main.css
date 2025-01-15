@@ -4,6 +4,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400,500,700,900&family=Noto+Serif+JP&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,700;1,800&display=swap');
 
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F11F8D;
+}
+
+.poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #F11F8D;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #F11F8D;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: italic;
+    color: #F11F8D;
+}
 
 /* コンテンツ幅以下可変レイアウト -----------------------------------------*/
 html {
@@ -95,11 +122,10 @@ a {
     left: 0;
     right: 0;
     z-index: 1000;
+    width: 100vw;
 }
 
 .header__inner {
-    max-width: 34.3rem;
-    margin: 0 auto;
     padding: 0 0 0 1.6rem;
     display: flex;
     justify-content: space-between;
@@ -110,9 +136,15 @@ a {
 @media (min-width: 768px) {
     .header__inner {
         max-width: 120rem;
+        margin: 0 auto;
         padding: 0 2rem;
         height: 10rem;
     }
+}
+
+.header__logo img {
+    width: 16.6rem;
+    color: #005BAC;
 }
 
 .hamburger {
@@ -138,15 +170,27 @@ a {
 }
 
 .header__nav--sp {
-    width: 39rem;
-    height: 33.1rem;
     position: fixed;
-    top: 7rem;
-    left: 0;
+    top: 0;
+    right: -100%;
+    /* 画面外に隠す */
+    width: 70%;
+    height: 100%;
     background-color: #005BAC;
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    /* スライドアニメーション */
+    z-index: 1000;
+}
+
+/* activeクラスが付与されたときに画面内にスライドイン */
+.header__nav--sp.active {
+    right: 0;
+    /* 画面右側に表示 */
 }
 
 @media (min-width: 768px) {
@@ -203,3 +247,83 @@ a {
 }
 
 /* メインビジュアル -----------------------------------------*/
+.main__visual {
+    width: 39rem;
+    /* 固定幅 */
+    height: 25rem;
+    /* 固定高さ */
+    position: relative;
+    overflow: hidden;
+    /* はみ出た部分を非表示 */
+    margin-top: 7rem;
+}
+
+.main__visual-image {
+    position: absolute;
+    right: 0;
+    /* 右揃え */
+    top: 0;
+    /* 上揃え */
+    width: auto;
+    /* 横幅は元の比率を維持 */
+    height: 100%;
+    /* 親要素の高さに合わせる */
+}
+
+.main__visual--content {
+    position: relative;
+    left: 1.6rem;
+    top: 3.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: skyblue;
+    padding: 0;
+    width: 17.5rem;
+}
+
+.main__visual--content-upper {
+    width: 14.725rem;
+    height: 6.865rem;
+    background-image: url(../image/frame.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.main__visual--content-upper h2 {
+    font-size: 1.1rem;
+    line-height: 3.1rem;
+}
+
+.font__size--25 {
+    font-size: 2.5rem;
+}
+
+.font__size--36 {
+    font-size: 3.6rem;
+}
+
+.main__visual--content-lower p {
+    font-size: 1.4rem;
+}
+
+.main__visual--content-lower h2 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #005BAC;
+}
+
+/* フッター -----------------------------------------*/
+.footer {
+    background-color: #DDD;
+    height: 8.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__copyright {
+    font-size: 1.3rem;
+    color: #333;
+}
