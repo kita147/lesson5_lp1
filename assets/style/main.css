@@ -54,7 +54,7 @@ h6 {
     margin: 0;
     padding: 0;
     font-size: inherit;
-    font-weight: inherit;
+    font-weight: normal;
 }
 
 img {
@@ -78,13 +78,12 @@ a {
 
 
 
-/* 共通クラス -----------------------------------------*/
-.container {
-    max-width: 1200px;
+/* 共通クラス（未使用） -----------------------------------------*/
+.common_container {
+    max-width: 120rem;
     margin: 0 auto;
     padding: 0 2rem;
 }
-
 
 
 /* ヘッダー -----------------------------------------*/
@@ -158,8 +157,6 @@ a {
     }
 }
 
-
-
 .header__nav--pc {
     display: none;
 }
@@ -204,3 +201,5 @@ a {
     opacity: 0.7;
     /* 全体を少し透明にして白っぽく */
 }
+
+/* メインビジュアル -----------------------------------------*/
