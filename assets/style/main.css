@@ -428,7 +428,7 @@ a {
     flex-direction: column;
     justify-content: center;
     row-gap: 1.2rem;
-    padding: 2.4rem 0;
+    padding: 2.4rem 0 1.7rem 0;
     text-align: center;
 }
 
@@ -489,21 +489,38 @@ a {
 }
 
 /* 選ばれる３つの理由  -----------------------------------------*/
-.main__point h2 {
+.point h2 {
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
-.main__point span {
+.point span {
     font-size: 4rem;
 }
 
-.main__point--content {
+.point__box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 3.6rem;
+}
+
+.point__text h3 {
+    font-size: 2.4rem;
+}
+
+.point__text h3 span {
+    font-size: 3.6rem;
+}
+
+.point__text h4 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.point__text p {
+    font-size: 1.6rem;
 }
 
 /* 入学説明会に申し込む -----------------------------------------*/
