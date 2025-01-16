@@ -506,6 +506,10 @@ a {
     align-items: center;
 }
 
+.point__photo {
+    height: 22rem;
+}
+
 .point__text h3 {
     font-size: 2.4rem;
 }
