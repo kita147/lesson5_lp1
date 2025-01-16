@@ -47,7 +47,7 @@
 
 /* コンテンツ幅以下可変レイアウト -----------------------------------------*/
 html {
-    font-size: calc(10 * 100vw / 413);
+    font-size: calc(10 * 100vw / 375);
     /* 413はSPデザインカンプの幅 */
 }
 
@@ -149,28 +149,6 @@ a {
     }
 }
 
-/* ボタンの設定ここから -----------------------------------------*/
-
-
-
-
-.button__main {
-    display: inline-block;
-    width: 25rem;
-    height: 4.8rem;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #fff;
-    background: #333;
-    border-radius: 2.5rem;
-    text-align: center;
-    line-height: 4.8rem;
-    /* ボタンの高さに合わせて中央揃え */
-    cursor: pointer;
-    transition: opacity 0.2s;
-}
-
-/* ボタンの設定ここまで -----------------------------------------*/
 
 /* ヘッダー -----------------------------------------*/
 .header {
@@ -354,14 +332,14 @@ a {
     overflow: hidden;
 }
 
-.hero__content--inner {
+.hero__content--relative {
     position: relative;
     max-width: 37.5rem;
     margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-    .hero__content--inner {
+    .hero__content--relative {
         max-width: 120rem;
     }
 }
@@ -469,12 +447,44 @@ a {
 @media (min-width: 768px) {
     .hero__button_group {
         position: absolute;
-        top: -5rem;
+        top: -5.7rem;
         left: 50%;
         transform: translateX(-50%);
         flex-direction: row;
         justify-content: center;
         column-gap: 4rem;
+    }
+}
+
+.button__hero {
+    display: inline-block;
+    width: 25rem;
+    height: 4.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    background: #333;
+    border-radius: 2.5rem;
+    text-align: center;
+    line-height: 4.8rem;
+    /* ボタンの高さに合わせて中央揃え */
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+@media (min-width: 768px) {
+    .button__hero {
+        width: 34rem;
+        height: 7.5rem;
+        font-size: 2.4rem;
+        border-radius: 3.8rem;
+        line-height: 7.5rem;
+        /* ボタンの高さに合わせて中央揃え */
+    }
+
+    .button__hero:hover {
+        opacity: 0.7;
+        /* 全体を少し透明にして白っぽく */
     }
 }
 
