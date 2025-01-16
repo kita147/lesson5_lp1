@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* フォントの指定 -----------------------------------------*/
+/* フォントの導入 -----------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400,500,700,900&family=Noto+Serif+JP&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,700;1,800&display=swap');
 
@@ -45,11 +45,10 @@
 }
 
 
-
 /* コンテンツ幅以下可変レイアウト -----------------------------------------*/
 html {
-    font-size: calc(10 * 100vw / 343);
-    /* 343はSPデザインカンプの幅 */
+    font-size: calc(10 * 100vw / 413);
+    /* 413はSPデザインカンプの幅 */
 }
 
 @media (min-width:768px) {
@@ -117,8 +116,6 @@ a {
     color: inherit;
 }
 
-
-
 /* 共通クラス -----------------------------------------*/
 .common_container {
     max-width: 37.5rem;
@@ -130,6 +127,7 @@ a {
     .common_container {
         max-width: 120rem;
         padding: 0 2rem;
+        margin: 0 auto;
     }
 }
 
@@ -151,6 +149,29 @@ a {
     }
 }
 
+/* ボタンの設定ここから -----------------------------------------*/
+
+
+
+
+.button__main {
+    display: inline-block;
+    width: 25rem;
+    height: 4.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    background: #333;
+    border-radius: 2.5rem;
+    text-align: center;
+    line-height: 4.8rem;
+    /* ボタンの高さに合わせて中央揃え */
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+/* ボタンの設定ここまで -----------------------------------------*/
+
 /* ヘッダー -----------------------------------------*/
 .header {
     background-color: #fff;
@@ -164,19 +185,20 @@ a {
 }
 
 .header__inner {
-    padding: 0 0 0 1.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 7rem;
+    padding: 0 0 0 1.6rem;
+
 }
 
 @media (min-width: 768px) {
     .header__inner {
         max-width: 120rem;
         margin: 0 auto;
+        height: 10.1rem;
         padding: 0 2rem;
-        height: 10rem;
     }
 }
 
@@ -215,19 +237,15 @@ a {
 
 .header__nav--sp {
     position: fixed;
-    top: 0;
-    right: -100%;
-    /* 画面外に隠す */
-    width: 70%;
-    height: 100%;
+    top: 7rem;
+    /* ヘッダーの高と同値にする */
+    right: -100vw;
+    width: 100vw;
+    height: 331px;
+    color: #fff;
     background-color: #005BAC;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     transition: right 0.3s ease;
-    /* スライドアニメーション */
     z-index: 1000;
 }
 
@@ -235,6 +253,11 @@ a {
 .header__nav--sp.active {
     right: 0;
     /* 画面右側に表示 */
+}
+
+.header__nav--sp--list {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -253,83 +276,115 @@ a {
     .header__nav--pc {
         display: block;
     }
+
+    .header__nav--pc--list {
+        display: flex;
+        align-items: center;
+        column-gap: 4.8rem;
+        font-size: 2rem;
+    }
+
+    .header__nav--pc--list a {
+        font-weight: 500;
+    }
+
+    .header__nav--pc--list a:hover {
+        color: #0A76E2;
+    }
 }
 
-.header__nav--pc--list {
-    display: flex;
-    align-items: center;
-    column-gap: 4.8rem;
-    font-size: 2rem;
-}
-
-.header__nav--pc--list a {
-    font-weight: 500;
-}
-
-.header__nav--pc--list a:hover {
-    color: #0A76E2;
-}
-
-.header__button--pc {
+.button__header {
     display: inline-block;
-    width: 28.2rem;
-    height: 6.1rem;
+    width: 3.5rem;
+    height: 6.6rem;
+    line-height: 6.6rem;
+    /* 垂直に中央揃えする為に高さと同値にする事 */
     font-weight: 700;
-    color: #fff;
-    background: linear-gradient(to right, #0271E0, #53A2F0);
+    color: #005BAC;
+    background: #fff;
     border-radius: 3.8rem;
     text-align: center;
-    line-height: 6.1rem;
-    /* ボタンの高さに合わせて中央揃え */
     cursor: pointer;
     transition: opacity 0.2s;
 }
 
-.header__button--pc:hover {
-    opacity: 0.7;
-    /* 全体を少し透明にして白っぽく */
+@media (min-width: 768px) {
+    .button__header {
+        display: inline-block;
+        width: 28.2rem;
+        height: 6.1rem;
+        font-weight: 700;
+        color: #fff;
+        background: linear-gradient(to right, #0271E0, #53A2F0);
+        border-radius: 3.8rem;
+        text-align: center;
+        line-height: 6.1rem;
+        /* ボタンの高さに合わせて中央揃え */
+        cursor: pointer;
+        transition: opacity 0.2s;
+    }
+
+    .button__header:hover {
+        opacity: 0.7;
+        /* 全体を少し透明にして白っぽく */
+    }
 }
 
-/* メインビジュアル -----------------------------------------*/
-.main__visual {
-    width: 100vw;
+
+/* ヒーロビュー -----------------------------------------*/
+.hero {
     height: 250px;
-    position: relative;
     overflow: hidden;
     /* はみ出た部分を非表示 */
     margin-top: 7rem;
 }
 
 @media (min-width: 768px) {
-    .main__visual {
+    .hero {
         height: 650px;
         margin-top: 10rem;
     }
 }
 
-.main__visual-image {
-    position: absolute;
-    right: 0;
-    /* 右揃え */
-    top: 0;
-    /* 上揃え */
-    width: auto;
-    /* 横幅は元の比率を維持 */
+.hero-image {
+    width: 100%;
     height: 100%;
-    /* 親要素の高さに合わせる */
+    object-fit: cover;
+    object-position: right;
+    overflow: hidden;
 }
 
-.main__visual--content {
+.hero__content--inner {
     position: relative;
+    max-width: 37.5rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .hero__content--inner {
+        max-width: 120rem;
+    }
+}
+
+.hero__content {
+    position: absolute;
+    top: -21.6rem;
     left: 1.6rem;
-    top: 3.4rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
 }
 
-.main__visual--content-upper {
+@media (min-width: 768px) {
+    .hero__content {
+        top: -54.6rem;
+        left: 6.2rem;
+    }
+
+}
+
+.hero__content-upper {
     width: 14.725rem;
     height: 6.865rem;
     background-image: url(../image/frame.svg);
@@ -339,16 +394,54 @@ a {
     margin-bottom: 2rem;
 }
 
-.main__visual--content-upper h2 {
+@media (min-width: 768px) {
+    .hero__content-upper {
+        width: 32.521rem;
+        height: 15rem;
+        margin-bottom: 3.2rem;
+    }
+}
+
+.hero__content-upper h2 {
     font-size: 1.1rem;
     line-height: 3.1rem;
 }
 
-.main__visual--content-lower p {
+.hero__content-upper h2 span {
+    font-size: 2.5rem;
+}
+
+.hero__content-upper h2 span:last-child {
+    font-size: 3.6rem;
+}
+
+@media (min-width: 768px) {
+    .hero__content-upper h2 {
+        font-size: 2rem;
+        line-height: 1.45;
+    }
+
+    .hero__content-upper h2 span {
+        font-size: 5.4rem;
+    }
+
+    .hero__content-upper h2 span:last-child {
+        font-size: 7.4rem;
+    }
+
+}
+
+.hero__content-lower p {
     font-size: 1.4rem;
 }
 
-.main__visual--content-lower h2 {
+@media (min-width: 768px) {
+    .hero__content-lower p {
+        font-size: 3.3rem;
+    }
+}
+
+.hero__content-lower h2 {
     font-size: 2.5rem;
     font-weight: 900;
     color: #005BAC;
@@ -357,13 +450,14 @@ a {
 }
 
 @media (min-width: 768px) {
-    .main__nav {
-        position: relative;
-        top: -4.5rem;
+    .hero__content-lower h2 {
+        font-size: 6rem;
+        line-height: 1.4;
     }
 }
 
-.main__visual--button-sp {
+
+.hero__button_group {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -373,27 +467,15 @@ a {
 }
 
 @media (min-width: 768px) {
-    .main__visual--button-sp {
+    .hero__button_group {
+        position: absolute;
+        top: -5rem;
+        left: 50%;
+        transform: translateX(-50%);
         flex-direction: row;
         justify-content: center;
         column-gap: 4rem;
     }
-}
-
-.main__button {
-    display: inline-block;
-    width: 25rem;
-    height: 4.8rem;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #fff;
-    background: #333;
-    border-radius: 2.5rem;
-    text-align: center;
-    line-height: 4.8rem;
-    /* ボタンの高さに合わせて中央揃え */
-    cursor: pointer;
-    transition: opacity 0.2s;
 }
 
 .color__lightgreen {
@@ -424,6 +506,13 @@ a {
     flex-direction: column;
     align-items: center;
     row-gap: 3.6rem;
+}
+
+/* 入学説明会に申し込む -----------------------------------------*/
+.information {
+    background-color: #FF5555;
+    opacity: 0.1;
+    text-align: center;
 }
 
 /* フッター -----------------------------------------*/

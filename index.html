@@ -45,8 +45,9 @@
                         <li><a href="#">コース・目的</a></li>
                         <li><a href="#">費用</a></li>
                         <li>
-                            <button type="button" class="header__button--sp">入学説明会に申し込む</button>
+                            <button type="button" class="button__header">入学説明会に申し込む</button>
                         </li>
+
                     </ul>
                 </nav>
                 <!-- SP用のナビメニューここまで -->
@@ -58,7 +59,7 @@
                         <li><a href="#">コース・目的</a></li>
                         <li><a href="#">費用</a></li>
                         <li>
-                            <button type="button" class="header__button--pc">入学説明会に申し込む</button>
+                            <button type="button" class="button__header">入学説明会に申し込む</button>
                         </li>
                     </ul>
                 </nav>
@@ -67,29 +68,31 @@
         </header>
 
         <main class="main">
-            <section class="main__visual">
-                <img src="assets/image/mainVIsual_sp.jpg" alt="Main Visual" class="main__visual-image sp">
-                <img src="assets/image/mainVIsual_pc.jpg" alt="Main Visual" class="main__visual-image pc">
-                <div class="main__visual--content common_container">
-                    <div class="main__visual--content-upper">
-                        <h2>難関大学の合格実績<br>
-                            <span class="poppins-extrabold-italic font__size--25">No.</span><span class="poppins-extrabold-italic font__size--36">1</span>
-                        </h2>
-                    </div>
-                    <div class="main__visual--content-lower">
-                        <p>現役高校生・高卒生</p>
-                        <h2>入学説明会の<br>お申し込み開始</h2>
+            <section class="hero">
+                <img src="assets/image/mainVIsual_sp.jpg" alt="Main Visual" class="hero-image sp">
+                <img src="assets/image/mainVIsual_pc.jpg" alt="Main Visual" class="hero-image pc">
+                <div class="hero__content--inner">
+                    <div class="hero__content">
+                        <div class="hero__content-upper">
+                            <h2>難関大学の合格実績<br>
+                                <span class="poppins-extrabold-italic">No.</span><span class="poppins-extrabold-italic">1</span>
+                            </h2>
+                        </div>
+                        <div class="hero__content-lower">
+                            <p>現役高校生・高卒生</p>
+                            <h2>入学説明会の<br>お申し込み開始</h2>
+                        </div>
                     </div>
                 </div>
             </section>
-            <nav class="main__nav">
-                <ul class="main__visual--button-sp">
-                    <li><button type="button" class="main__button color__lightgreen">入学のお問い合わせ</button></li>
-                    <li><button type="button" class="main__button color__orange">無料体験に申し込む</button></li>
-                    <li><button type="button" class="main__button color__cyan">資料請求する</button></li>
+            <section class="hero__content--inner">
+                <ul class="hero__button_group">
+                    <li><button type="button" class="button__main color__lightgreen">入学のお問い合わせ</button></li>
+                    <li><button type="button" class="button__main color__orange">無料体験に申し込む</button></li>
+                    <li><button type="button" class="button__main color__cyan">資料請求する</button></li>
                 </ul>
-            </nav>
-            <section class="main__point common_container">
+            </section>
+            <!--<section class="main__point common_container">
                 <h2>選ばれる<span class="poppins-bold ">3</span>つの理由</h2>
                 <div class="main__point--content">
                     <img src="assets/image/point_01.svg" alt="選ばれる理由1">
@@ -102,23 +105,23 @@
                     </div>
                 </div>
             </section>
-            <section class="main__information">
-                <p>入学ご検討の方は、まずは入学説明会にお越しください</p>
-                <button type="button" class="main__button--normal">入学説明会に申し込む</button>
+            <section class="information">
+                <p>入学ご検討の方は、まずは入学説明会に<br class="sp">お越しください</p>
+                <button type="button" class="button__information">入学説明会に申し込む</button>
             </section>
             <section class="main__course">
 
             </section>
-            <section class="main__information">
+            <section class="information">
                 <p>入学ご検討の方は、まずは入学説明会にお越しください</p>
-                <button type="button" class="main__button--normal">入学説明会に申し込む</button>
+                <button type="button" class="button__information">入学説明会に申し込む</button>
             </section>
             <section class="main__price">
 
             </section>
-            <section class="main__information">
+            <section class="information">
                 <p>入学ご検討の方は、まずは入学説明会にお越しください</p>
-                <button type="button" class="main__button--normal">入学説明会に申し込む</button>
+                <button type="button" class="button__information">入学説明会に申し込む</button>
             </section>
             <section class="main__classroom">
 
@@ -126,10 +129,10 @@
         </main>
         <footer class="footer">
             <small class="footer__copyright poppins-regular">copyright© 2023 Kira-Kira Juku All Rights Reserved.</small>
-        </footer>
+        </footer> -->
 
-        <!-- JavaScriptの導入 -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+            <!-- JavaScriptの導入 -->
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     </body>
 
 </html>
