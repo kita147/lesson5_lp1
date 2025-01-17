@@ -630,12 +630,26 @@ a {
 
 /* コース・目的 -----------------------------------------*/
 .course {
-    margin-top: 6.4rem;
+    margin: 6.3rem 0;
 }
 
 @media (min-width: 768px) {
     .course {
-        margin-top: 7.2rem;
+        margin: 7.2rem 0;
+    }
+}
+
+.course__container {
+    max-width: 37.5rem;
+    /*padding: 0 1.6rem;*/
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .course__container {
+        max-width: 120rem;
+        padding: 0 2rem;
+        margin: 0 auto;
     }
 }
 
@@ -653,31 +667,17 @@ a {
     }
 }
 
-/*タブの設定ここから*/
-.course {
-    max-width: 37.5rem;
-    padding: 0 1.6rem;
-    margin: 0 auto;
-}
-
-.course__container {
-    margin-bottom: 6.3rem;
-}
-
-@media (min-width: 768px) {
-    .course {
-        max-width: 120rem;
-        margin: 0 auto;
-    }
-
-    .course__container {
-        margin-bottom: 7.2rem;
-    }
-}
-
 .course__tabs {
     display: flex;
     justify-content: space-between;
+    padding: 0 1.6rem;
+}
+
+@media (min-width: 768px) {
+    .course__tabs {
+        max-width: 120rem;
+        padding: 0;
+    }
 }
 
 .course__tab {
@@ -685,8 +685,9 @@ a {
     font-weight: 700;
     text-align: center;
     width: calc(95% / 2);
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     border-radius: 12px 12px 0 0;
+    color: rgba(51, 51, 51, 0.5);
     background-color: #F0F0F0;
     cursor: pointer;
 }
@@ -699,6 +700,7 @@ a {
 
 .course__tab.active {
     background-color: #F2F9FF;
+    color: rgba(51, 51, 51, 1);
 }
 
 .course__content {
