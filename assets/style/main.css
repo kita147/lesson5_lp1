@@ -766,6 +766,22 @@ a {
     }
 }
 
+/* マウスオーバー時に画像の透明度を50%にする */
+.course__link:hover img {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    /* スムーズな透明度変化 */
+}
+
+/* PC版でのみ拡大させる */
+@media (min-width: 768px) {
+    .course__link:hover img {
+        transform: scale(1.2);
+        /* 120%に拡大 */
+        transition: transform 0.3s ease;
+    }
+}
+
 .course__photo {
     width: 100%;
     object-fit: cover;

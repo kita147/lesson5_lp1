@@ -108,9 +108,9 @@
             <!-- ヒーロービュー下のボタンここから -->
             <div class="hero__button common_container">
                 <ul class="hero__button_group">
-                    <li><button type="button" class="button__hero color__lightgreen">入学のお問い合わせ</button></li>
-                    <li><button type="button" class="button__hero color__orange">無料体験に申し込む</button></li>
-                    <li><button type="button" class="button__hero color__cyan">資料請求する</button></li>
+                    <li><button type="button" class="button__hero color__lightgreen" onclick="location.href='/inquiry'">入学のお問い合わせ</button></li>
+                    <li><button type="button" class="button__hero color__orange" onclick="location.href='/freetrial'">無料体験に申し込む</button></li>
+                    <li><button type="button" class="button__hero color__cyan" onclick="location.href='/request'">資料請求する</button></li>
                 </ul>
             </div>
             <!-- ヒーロービュー下のボタンここまで -->
@@ -155,7 +155,7 @@
             <!-- 入学説明会に申し込むボタン（共用）ここから -->
             <div class="information">
                 <p>入学ご検討の方は、まずは入学説明会に<br class="sp">お越しください</p>
-                <button type="button" class="button__information">入学説明会に申し込む</button>
+                <button type="button" class="button__information" onclick="location.href='/entry'">入学説明会に申し込む</button>
             </div>
             <!-- 入学説明会に申し込むボタン（共用）ここまで -->
 
@@ -172,18 +172,22 @@
                     <div class="course__content show">
                         <ul class="course__list">
                             <li class="course__photo">
-                                <img src="/assets/image/cource_01_sp.png" alt="高卒生のためのコース">
-                                <div class="course__type-box">
+                                <a href="#" class="course__link">
+                                    <img src="/assets/image/cource_01_sp.png" alt="高卒生のためのコース">
+                                </a>
+                                <a href="#" class="course__type-box">
                                     <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="右向きの矢印">
                                     <h4 class="course__type-text">高卒生</h4>
-                                </div>
+                                </a>
                             </li>
                             <li class="course__photo">
-                                <img src="/assets/image/cource_02_sp.png" alt="高校３年生のためのコース">
-                                <div class="course__type-box">
+                                <a href="#" class="course__link">
+                                    <img src="/assets/image/cource_02_sp.png" alt="高校３年生のためのコース">
+                                </a>
+                                <a href="#" class="course__type-box">
                                     <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="右向きの矢印">
                                     <h4 class="course__type-text">高校3年生</h4>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                         <ul class="course__list">
@@ -245,7 +249,7 @@
             <!-- 入学説明会に申し込むボタン（共用）ここから -->
             <div class="information">
                 <p>入学ご検討の方は、まずは入学説明会に<br class="sp">お越しください</p>
-                <button type="button" class="button__information">入学説明会に申し込む</button>
+                <button type="button" class="button__information" onclick="location.href='/entry'">入学説明会に申し込む</button>
             </div>
             <!-- 入学説明会に申し込むボタン（共用）ここまで -->
 
@@ -294,16 +298,16 @@
             <!-- 入学説明会に申し込むボタン（共用）ここから -->
             <div class="information">
                 <p>入学ご検討の方は、まずは入学説明会に<br class="sp">お越しください</p>
-                <button type="button" class="button__information">入学説明会に申し込む</button>
+                <button type="button" class="button__information" onclick="location.href='/entry'">入学説明会に申し込む</button>
             </div>
             <!-- 入学説明会に申し込むボタン（共用）ここまで -->
 
             <!-- よくある質問と近くの教室を探すバナーここから -->
             <div class="banner">
-                <a href="faq.html" class="banner__item banner__item--left">
+                <a href="/faq" class="banner__item banner__item--left">
                     <p class="banner__text">よくあるご質問</p>
                 </a>
-                <a href="search.html" class="banner__item banner__item--right">
+                <a href="/search" class="banner__item banner__item--right">
                     <p class="banner__text">お近くの教室を探す</p>
                 </a>
             </div>
