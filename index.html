@@ -7,7 +7,7 @@
         <title>入学説明会のお申し込み開始 | Kira-Kira Juku</title>
         <meta name="description" content="難関大学の合格実績No.1のKira-Kira Jukuが、現役高校生・高卒生向け入学説明会の申し込みを開始しました。">
 
-        <!-- OGP設定 -->
+        <!-- OGPの設定 -->
         <meta property="og:title" content="入学説明会のお申し込み開始 | Kira-Kira Juku">
         <meta property="og:description" content="難関大学の合格実績No.1のKira-Kira Jukuが、現役高校生・高卒生向け入学説明会の申し込みを開始しました。">
         <meta property="og:type" content="article">
@@ -24,6 +24,7 @@
     </head>
 
     <body>
+        <!-- ヘッダーここから -->
         <header class="header">
             <div class="header__inner">
                 <h1 class="header__logo">
@@ -66,8 +67,10 @@
                 <!-- PC用のナビメニューここまで -->
             </div>
         </header>
+        <!-- ヘッダーここまで -->
 
         <main class="main">
+            <!-- ヒーロービューここから -->
             <section class="hero">
                 <div class="hero__container">
                     <div class="hero__title">
@@ -77,13 +80,15 @@
                             </h2>
                         </div>
                         <div class="hero__title-lower">
-                            <p>現役高校生・高卒生</p>
-                            <h2>入学説明会の<br>お申し込み開始</h2>
+                            <h1>現役高校生・高卒生</h1>
+                            <h1>入学説明会の<br>お申し込み開始</h1>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- ヒーロービューここまで -->
 
+            <!-- ヒーロービュー下のボタンここから -->
             <div class="hero__button common_container">
                 <ul class="hero__button_group">
                     <li><button type="button" class="button__hero color__lightgreen">入学のお問い合わせ</button></li>
@@ -91,7 +96,9 @@
                     <li><button type="button" class="button__hero color__cyan">資料請求する</button></li>
                 </ul>
             </div>
+            <!-- ヒーロービュー下のボタンここまで -->
 
+            <!-- 選ばれる3つの理由ここから -->
             <section class="point common_container">
                 <h2 class="popint__title">選ばれる<span class="poppins-bold ">3</span>つの理由</h2>
 
@@ -126,12 +133,16 @@
                     </div>
                 </div>
             </section>
+            <!-- 選ばれる3つの理由ここまで -->
 
+            <!-- 入学説明会に申し込むボタン（共用）ここから -->
             <div class="information">
                 <p>入学ご検討の方は、まずは入学説明会に<br class="sp">お越しください</p>
                 <button type="button" class="button__information">入学説明会に申し込む</button>
             </div>
+            <!-- 入学説明会に申し込むボタン（共用）ここまで -->
 
+            <!-- コース・目的ここから -->
             <section class="course">
                 <div class="course__container">
                     <h2 class="course__title">コース・目的</h2>
@@ -187,70 +198,87 @@
                     </div>
                 </div>
             </section>
+            <!-- コース・目的ここまで -->
 
+            <!-- 入学説明会に申し込むボタン（共用）ここから -->
             <div class="information">
                 <p>入学ご検討の方は、まずは入学説明会に<br class="sp">お越しください</p>
                 <button type="button" class="button__information">入学説明会に申し込む</button>
             </div>
+            <!-- 入学説明会に申し込むボタン（共用）ここまで -->
 
+            <!-- 費用ここから -->
             <section class="price common_container">
-                <h2 class="price__title">費 用</h2>
-                <table class="custom-table">
-                    <thead>
-                        <tr>
-                            <th>年間講数</th>
-                            <th>年間授業料（税込み）</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>例: 30講</td>
-                            <td>例: ¥300,000</td>
-                        </tr>
-                        <tr>
-                            <td>例: 40講</td>
-                            <td>例: ¥400,000</td>
-                        </tr>
-                        <tr>
-                            <td>例: 50講</td>
-                            <td>例: ¥500,000</td>
-                        </tr>
-                        <tr>
-                            <td>例: 60講</td>
-                            <td>例: ¥600,000</td>
-                        </tr>
-                        <tr>
-                            <td>例: 70講</td>
-                            <td>例: ¥700,000</td>
-                        </tr>
-                        <tr>
-                            <td>例: 80講</td>
-                            <td>例: ¥800,000</td>
-                        </tr>
-                        <tr>
-                            <td>例: 90講</td>
-                            <td>例: ¥900,000</td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                <div class="price__vertical-padding">
+                    <h2 class="price__title">費 用</h2>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th class="price-table__header price-table__header--first">年間講数</th>
+                                <th class="price-table__header price-table__header--second">年間授業料（税込み）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5講</td>
+                                <td class="price__unique-font--number">24,500<span class="price__unique-font--yen">円</span></td>
+                            </tr>
+                            <tr>
+                                <td>10講</td>
+                                <td class="price__unique-font--number">49,000<span class="price__unique-font--yen">円</span></td>
+                            </tr>
+                            <tr>
+                                <td>11講</td>
+                                <td class="price__unique-font--number">53,900<span class="price__unique-font--yen">円</span></td>
+                            </tr>
+                            <tr>
+                                <td>12講</td>
+                                <td class="price__unique-font--number">58,800<span class="price__unique-font--yen">円</span></td>
+                            </tr>
+                            <tr>
+                                <td>22講</td>
+                                <td class="price__unique-font--number">107,800<span class="price__unique-font--yen">円</span></td>
+                            </tr>
+                            <tr>
+                                <td>24講</td>
+                                <td class="price__unique-font--number">117,600<span class="price__unique-font--yen">円</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
+            <!-- 費用ここまで -->
 
+            <!-- 入学説明会に申し込むボタン（共用）ここから -->
+            <div class="information">
+                <p>入学ご検討の方は、まずは入学説明会に<br class="sp">お越しください</p>
+                <button type="button" class="button__information">入学説明会に申し込む</button>
+            </div>
+            <!-- 入学説明会に申し込むボタン（共用）ここまで -->
 
-
-            <footer class="footer">
-                <small class="footer__copyright poppins-regular">copyright© 2023 Kira-Kira Juku All Rights Reserved.</small>
-            </footer>
-
+            <!-- よくある質問と近くの教室を探すバナーここから -->
+            <div class="banner">
+                <a href="faq.html" class="banner__item banner__item--left">
+                    <p class="banner__text">よくあるご質問</p>
+                </a>
+                <a href="search.html" class="banner__item banner__item--right">
+                    <p class="banner__text">お近くの教室を探す</p>
+                </a>
+            </div>
+            <!-- よくある質問と近くの教室を探すバナーここまで -->
         </main>
+
+        <!-- フッターここから -->
+        <footer class="footer">
+            <small class="footer__copyright poppins-regular">copyright© 2023 Kira-Kira Juku All Rights Reserved.</small>
+        </footer>
+        <!-- フッターここまで -->
 
         <!-- JavaScript（jQuery）の導入 -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
         <!-- JavaScript（jQuery）ファイルの読み込み -->
         <script src="/assets/script/main.js"></script>
-
-
     </body>
 
 </html>
