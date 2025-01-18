@@ -27,28 +27,47 @@
         <!-- ヘッダーここから -->
         <header class="header">
             <div class="header__container">
+
+                <!-- Kira-Kira Juku ロゴマーク -->
                 <div class="header__logo">
-                    <a href="index.html">
+                    <a href="/">
                         <img src="/assets/image/logo.svg" alt="Kira-Kira Juku">
                     </a>
                 </div>
 
+                <!-- ハンバーガーメニューの3本線ボタン -->
                 <button class="hamburger" aria-label="メニュー">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
                 </button>
 
                 <!-- SP用のナビメニューここから -->
                 <nav class="header__nav--sp">
                     <ul class="header__nav--sp--list">
-                        <li><a href="#">選ばれる3つの理由</a></li>
-                        <li><a href="#">コース・目的</a></li>
-                        <li><a href="#">費用</a></li>
-                        <li>
-                            <button type="button" class="button__header">入学説明会に申し込む</button>
+                        <li class="header__list-left">
+                            <div class="header__nav--sp-box">
+                                <img class="header__arrow" src="/assets/image/arrow_right.svg" alt="右向きの矢印">
+                                <a class="header__nav--sp-text" href="#point">選ばれる3つの理由</a>
+                            </div>
                         </li>
-
+                        <li class="header__list-left">
+                            <div class="header__nav--sp-box">
+                                <img class="header__arrow" src="/assets/image/arrow_right.svg" alt="右向きの矢印">
+                                <a class="header__nav--sp-text" href="#course">コース・目的</a>
+                            </div>
+                        </li>
+                        <li class="header__list-left">
+                            <div class="header__nav--sp-box">
+                                <img class="header__arrow" src="/assets/image/arrow_right.svg" alt="右向きの矢印">
+                                <a class="header__nav--sp-text" href="#price">費 用</a>
+                            </div>
+                        </li>
+                        <li class="header__list-center">
+                            <button type="button" class="button__header" onclick="location.href='/entry'">
+                                入学説明会に申し込む
+                            </button>
+                        </li>
                     </ul>
                 </nav>
                 <!-- SP用のナビメニューここまで -->
@@ -56,11 +75,11 @@
                 <!-- PC用のナビメニューここから -->
                 <nav class="header__nav--pc">
                     <ul class="header__nav--pc--list">
-                        <li><a href="#">選ばれる3つの理由</a></li>
-                        <li><a href="#">コース・目的</a></li>
-                        <li><a href="#">費用</a></li>
+                        <li><a href="#point">選ばれる3つの理由</a></li>
+                        <li><a href="#course">コース・目的</a></li>
+                        <li><a href="#price">費用</a></li>
                         <li>
-                            <button type="button" class="button__header">入学説明会に申し込む</button>
+                            <button type="button" class="button__header" onclick="location.href='/entry'">入学説明会に申し込む</button>
                         </li>
                     </ul>
                 </nav>
@@ -97,7 +116,7 @@
             <!-- ヒーロービュー下のボタンここまで -->
 
             <!-- 選ばれる3つの理由ここから -->
-            <section class="point common_container">
+            <section id="point" class="common_container">
                 <h2 class="popint__title">選ばれる<span class="poppins-bold ">3</span>つの理由</h2>
 
                 <div class="point__container">
@@ -141,7 +160,7 @@
             <!-- 入学説明会に申し込むボタン（共用）ここまで -->
 
             <!-- コース・目的ここから -->
-            <section class="course">
+            <section id="course">
                 <div class="course__container">
                     <h2 class="course__title">コース・目的</h2>
                     <!-- タブのコンテナ -->
@@ -231,7 +250,7 @@
             <!-- 入学説明会に申し込むボタン（共用）ここまで -->
 
             <!-- 費用ここから -->
-            <section class="price common_container">
+            <section id="price" class="common_container">
                 <div class="price__vertical-padding">
                     <h2 class="price__title">費 用</h2>
                     <table class="price-table">

@@ -183,6 +183,7 @@ a {
     }
 }
 
+/* ハンバーガーメニューの3本線ボタン */
 .hamburger {
     width: 7rem;
     height: 7rem;
@@ -191,45 +192,103 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    row-gap: 0.68rem;
     cursor: pointer;
-    padding: 2rem;
 }
 
-.hamburger span {
+.hamburger__line {
     display: block;
-    width: 100%;
+    width: 3rem;
     height: 5px;
     background-color: #fff;
-    margin: 0.4rem 0;
-    /* スペース調整 */
     border-radius: 2px;
 }
 
+/* SP表示のナビメニュー（ハンバーガーメニューの中）ここから */
 .header__nav--sp {
     position: fixed;
-    top: 7rem;
-    /* ヘッダーの高と同値にする */
+    top: 6.9rem;
+    /* 線が入ってしまうので1ピクセル上に配置しています */
     right: -100vw;
     width: 100vw;
-    height: 331px;
-    color: #fff;
+    padding: 0 1.6rem;
     background-color: #005BAC;
-    padding: 2rem;
-    transition: right 0.3s ease;
     z-index: 1000;
+    transition: right 0.3s ease;
 }
 
 /* activeクラスが付与されたときに画面内にスライドイン */
 .header__nav--sp.active {
     right: 0;
-    /* 画面右側に表示 */
+    /* 画面外（右の外側）に表示 */
 }
 
 .header__nav--sp--list {
     display: flex;
     flex-direction: column;
+    /* 縦並びにする */
+    /*gap: 2rem;*/
+    /* 各要素の間隔を調整 */
 }
 
+/* ボタンのスタイル */
+.button__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* 幅を文字列に合わせる */
+    min-width: 10rem;
+    /* 最小幅を指定（必要に応じて調整）*/
+    height: 6.6rem;
+    /* 高さをカンプ値で固定 */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #005BAC;
+    background: #fff;
+    border-radius: 3.8rem;
+    cursor: pointer;
+    line-height: normal;
+    /* 行間をリセット */
+}
+
+/* ハンバーガーメニューー内の文字の設定ここから */
+.header__list-left {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    padding: 1.8rem 0;
+}
+
+.header__list-center {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.header__nav--sp-box {
+    display: flex;
+    align-items: center;
+}
+
+.header__arrow {
+    width: 1.4rem;
+    margin-right: 1.2rem;
+}
+
+.header__nav--sp-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* ボタンのホバー効果 */
+.button__header:hover {
+    opacity: 0.8;
+}
+
+/* ハンバーガーメニューー内の文字の設定ここまで */
+/* SP表示のナビメニュー（ハンバーガーメニューの中）ここまで */
+
+/* PC表示のときはハンバーガーボタンとナビメニューを隠す */
 @media (min-width: 768px) {
 
     .hamburger,
@@ -261,21 +320,6 @@ a {
     .header__nav--pc--list a:hover {
         color: #0A76E2;
     }
-}
-
-.button__header {
-    display: inline-block;
-    width: 3.5rem;
-    height: 6.6rem;
-    line-height: 6.6rem;
-    /* 垂直に中央揃えする為に高さと同値にする事 */
-    font-weight: 700;
-    color: #005BAC;
-    background: #fff;
-    border-radius: 3.8rem;
-    text-align: center;
-    cursor: pointer;
-    transition: opacity 0.2s;
 }
 
 @media (min-width: 768px) {
@@ -420,7 +464,7 @@ a {
     flex-direction: column;
     justify-content: center;
     row-gap: 1.2rem;
-    padding: 2.4rem 0 1.7rem 0;
+    padding: 2.4rem 0 1.7rem;
     text-align: center;
 }
 
@@ -481,12 +525,12 @@ a {
 }
 
 /* 選ばれる３つの理由  -----------------------------------------*/
-.point {
+#point {
     margin-top: 0;
 }
 
 @media (min-width: 768px) {
-    .point {
+    #point {
         padding-top: 6.3rem;
     }
 }
@@ -622,12 +666,12 @@ a {
 }
 
 /* コース・目的 -----------------------------------------*/
-.course {
+#course {
     margin: 6.3rem 0;
 }
 
 @media (min-width: 768px) {
-    .course {
+    #course {
         margin: 7.2rem 0;
     }
 }
