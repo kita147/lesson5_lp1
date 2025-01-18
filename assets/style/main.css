@@ -766,19 +766,46 @@ a {
     }
 }
 
-/* マウスオーバー時に画像の透明度を50%にする */
-.course__link:hover img {
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
-    /* スムーズな透明度変化 */
+/* 親要素にoverflow: hiddenを設定 */
+.course__link {
+    display: block;
+    /* 必要に応じて */
+    overflow: hidden;
+    /* 枠からはみ出る部分を隠す */
+    position: relative;
+    /* 必要に応じてポジションを指定 */
 }
 
-/* PC版でのみ拡大させる */
-@media (min-width: 768px) {
+/* マウスオーバー時に画像の透明度を50%に */
+.course__link:hover img {
+    opacity: 0.5;
+    transform: scale(1.2);
+    /* 画像を拡大 */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* スムーズに拡大＆透明化 */
+}
+
+/* 通常時の画像設定（縮小・配置用） */
+.course__link img {
+    display: block;
+    /* 必要に応じて */
+    width: 100%;
+    /* 親要素の幅に合わせる */
+    height: auto;
+    /* アスペクト比を維持 */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* スムーズな変化 */
+}
+
+.common_radius--small {
+    border-radius: 1.2rem;
+}
+
+/* PC版でのみ適用するスタイル */
+@media (min-width: 1024px) {
     .course__link:hover img {
         transform: scale(1.2);
-        /* 120%に拡大 */
-        transition: transform 0.3s ease;
+        /* 拡大率を120% */
     }
 }
 
