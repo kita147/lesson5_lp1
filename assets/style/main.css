@@ -37,7 +37,7 @@
 /* コンテンツ幅以下可変レイアウト -----------------------------------------*/
 html {
     font-size: calc(10 * 100vw / 375);
-    /* 413はSPデザインカンプの幅 */
+    /* 375はSPデザインカンプの幅 */
 }
 
 @media (min-width:768px) {
@@ -705,16 +705,13 @@ a {
 
 .course__content {
     display: none;
-    /*必須*/
 }
 
 .course__content.show {
     display: block;
-    /*必須*/
     background-color: #F2F9FF;
 }
 
-/* タブの中身で写真のリスト */
 .course__list {
     display: flex;
     flex-direction: column;
@@ -744,7 +741,65 @@ a {
     padding: 1.6rem 0;
 }
 
-/*タブの設定ここまで*/
+/* 費用 -----------------------------------------*/
+.price {
+    margin: 6.4rem 0;
+}
+
+@media (min-width: 768px) {
+    .price {
+        margin: 7.2rem 0;
+    }
+}
+
+.price__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2.3rem;
+}
+
+@media (min-width: 768px) {
+    .price__title {
+        font-size: 3.6rem;
+        margin-bottom: 3.2rem;
+    }
+}
+
+
+.custom-table {
+    width: 100%;
+    border-collapse: separate;
+    /* 内側と外側の線を分離 */
+    border-spacing: 0;
+    /* 内側のセル間の余白をなくす */
+    border: 3px solid #CCCCCC;
+    /* 外枠の線 */
+}
+
+.custom-table th {
+    background-color: #F5F5F5;
+    /* 背景色 */
+    font-weight: bold;
+    padding: 10px;
+    /* セル内の余白 */
+    border: 1px solid #CCCCCC;
+    /* 内側の線幅を1pxに設定 */
+}
+
+.custom-table td {
+    padding: 10px;
+    /* セル内の余白 */
+    border: 1px solid #CCCCCC;
+    /* 内側の線幅を1pxに設定 */
+}
+
+.custom-table th,
+.custom-table td {
+    text-align: center;
+    /* テキストを中央揃え */
+}
+
 
 /* フッター -----------------------------------------*/
 .footer {
