@@ -68,12 +68,15 @@ html {
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.75;
     background-color: #fff;
     color: #333;
 }
 
+th,
+p,
 h1,
 h2,
 h3,
@@ -84,12 +87,6 @@ h6 {
     padding: 0;
     font-size: inherit;
     font-weight: normal;
-}
-
-p {
-    margin: 0;
-    padding: 0;
-    font-size: 1.6rem;
 }
 
 img {
@@ -157,7 +154,7 @@ a {
     width: 100vw;
 }
 
-.header__inner {
+.header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -167,7 +164,7 @@ a {
 }
 
 @media (min-width: 768px) {
-    .header__inner {
+    .header__container {
         max-width: 120rem;
         margin: 0 auto;
         height: 10.1rem;
@@ -331,6 +328,9 @@ a {
 }
 
 .hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 3.4rem 1.6rem;
 }
 
@@ -342,14 +342,7 @@ a {
     }
 }
 
-.hero__title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-}
-
-.hero__title-upper {
+.hero__title-bg-image {
     width: 14.725rem;
     height: 6.865rem;
     background-image: url(../image/frame.svg);
@@ -360,53 +353,53 @@ a {
 }
 
 @media (min-width: 768px) {
-    .hero__title-upper {
+    .hero__title-bg-image {
         width: 32.521rem;
         height: 15rem;
         margin-bottom: 3.2rem;
     }
 }
 
-.hero__title-upper h2 {
+.hero__title-nankan {
     font-size: 1.1rem;
     line-height: 3.1rem;
 }
 
-.hero__title-upper h2 span {
+.hero__title-no {
     font-size: 2.5rem;
 }
 
-.hero__title-upper h2 span:last-child {
+.hero__title-one {
     font-size: 3.6rem;
 }
 
 @media (min-width: 768px) {
-    .hero__title-upper h2 {
+    .hero__title-nankan {
         font-size: 2rem;
         line-height: 1.45;
     }
 
-    .hero__title-upper h2 span {
+    .hero__title-no {
         font-size: 5.4rem;
     }
 
-    .hero__title-upper h2 span:last-child {
+    .hero__title-one {
         font-size: 7.4rem;
     }
 
 }
 
-.hero__title-lower p {
+.hero__title-geneki {
     font-size: 1.4rem;
 }
 
 @media (min-width: 768px) {
-    .hero__title-lower p {
+    .hero__title-geneki {
         font-size: 3.3rem;
     }
 }
 
-.hero__title-lower h2 {
+.hero__title-main {
     font-size: 2.5rem;
     font-weight: 900;
     color: #005BAC;
@@ -415,7 +408,7 @@ a {
 }
 
 @media (min-width: 768px) {
-    .hero__title-lower h2 {
+    .hero__title-main {
         font-size: 6rem;
         line-height: 1.4;
     }
@@ -742,13 +735,13 @@ a {
 }
 
 /* 費用 -----------------------------------------*/
-.price {
-    margin: 6.4rem 0;
+.price__vertical-padding {
+    padding: 6.1rem 0 6.7rem;
 }
 
 @media (min-width: 768px) {
-    .price {
-        margin: 7.2rem 0;
+    .price__vertical-padding {
+        padding: 7.2rem 0;
     }
 }
 
@@ -766,39 +759,134 @@ a {
     }
 }
 
-
-.custom-table {
+/* 費用の表ここから ---------*/
+.price-table {
     width: 100%;
     border-collapse: separate;
-    /* 内側と外側の線を分離 */
+    /* 外枠と内側の線を分ける */
     border-spacing: 0;
-    /* 内側のセル間の余白をなくす */
+    /* セル間の余白をなくす */
     border: 3px solid #CCCCCC;
     /* 外枠の線 */
 }
 
-.custom-table th {
+.price-table__header {
     background-color: #F5F5F5;
-    /* 背景色 */
-    font-weight: bold;
+    font-size: 1.6rem;
+    font-weight: 400;
     padding: 10px;
     /* セル内の余白 */
     border: 1px solid #CCCCCC;
-    /* 内側の線幅を1pxに設定 */
-}
-
-.custom-table td {
-    padding: 10px;
-    /* セル内の余白 */
-    border: 1px solid #CCCCCC;
-    /* 内側の線幅を1pxに設定 */
-}
-
-.custom-table th,
-.custom-table td {
     text-align: center;
-    /* テキストを中央揃え */
 }
+
+@media (min-width: 768px) {
+    .price-table__header {
+        font-size: 1.8rem;
+    }
+}
+
+.price-table__header--first {
+    border-right: none;
+}
+
+.price-table__header--second {
+    border-left: none;
+}
+
+.price-table td {
+    padding: 10px;
+    /* セル内の余白 */
+    border: 1px solid #CCCCCC;
+    text-align: center;
+}
+
+.price__unique-font--number {
+    font-family: "Poppins", serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-style: normal;
+    color: #F11F8D;
+}
+
+.price__unique-font--yen {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #F11F8D;
+}
+
+@media (min-width: 768px) {
+    .price__unique-font--number {
+        font-size: 3.2rem;
+    }
+
+    .price__unique-font--yen {
+        font-size: 1.8rem;
+    }
+}
+
+/* 費用の表ここまで -------------*/
+
+/* 画像バナー「よくあるご質問」と「お近くの教室を探す」--------------------------*/
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .banner {
+        flex-direction: row;
+    }
+}
+
+.banner__item {
+    width: 100%;
+    height: 17rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1.6rem;
+}
+
+@media (min-width: 768px) {
+    .banner__item {
+        width: 50%;
+        height: 32rem;
+        justify-content: center;
+        padding: 0;
+    }
+}
+
+.banner__item--left {
+    background-image: url('/assets/image/qa_sp.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner__item--right {
+    background-image: url('/assets/image/classrooms_sp.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner__text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .banner__text {
+        font-size: 3.2rem;
+    }
+}
+
+
 
 
 /* フッター -----------------------------------------*/
@@ -808,6 +896,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        height: 12rem;
+    }
 }
 
 .footer__copyright {
