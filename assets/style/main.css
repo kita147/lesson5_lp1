@@ -959,6 +959,7 @@ a {
     align-items: center;
     justify-content: flex-start;
     padding: 0 1.6rem;
+    transition: ;
 }
 
 @media (min-width: 768px) {
@@ -974,12 +975,24 @@ a {
     background-image: url('../image/qa_pc.jpg');
     background-size: cover;
     background-position: center;
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-banner__item--left:hover {
+    opacity: 0.5;
 }
 
 .footer-banner__item--right {
     background-image: url('../image/classrooms_pc.jpg');
     background-size: cover;
     background-position: center;
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-banner__item--right:hover {
+    opacity: 0.5;
 }
 
 .footer-banner__text {
