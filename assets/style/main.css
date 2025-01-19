@@ -789,7 +789,6 @@ a {
     /* はみ出した所は非表示、丸角は別クラスです */
 }
 
-
 .course__picture {
     transition: transform 0.3s ease, opacity 0.3s ease;
     /*拡大と透明度のアニメーション付与 */
@@ -799,12 +798,14 @@ a {
     opacity: 0.5;
 }
 
-/* PC版でのみ適用するスタイル */
+/* PC版のみ画像が拡大させる */
 @media (min-width: 1024px) {
     .course__picture:hover {
         transform: scale(1.2);
     }
 }
+
+/* マウスオーバーで透明度50%、PC版のみ拡大ここまで------------*/
 
 .course__type-box {
     display: flex;
@@ -937,9 +938,8 @@ a {
 
 /* 費用の表ここまで -------------*/
 
-/* 画像バナー「よくあるご質問」と「お近くの教室を探す」--------------------------*/
-
-.banner {
+/* フッターここから------------------------------------*/
+.footer-banner {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -947,12 +947,12 @@ a {
 }
 
 @media (min-width: 768px) {
-    .banner {
+    .footer-banner {
         flex-direction: row;
     }
 }
 
-.banner__item {
+.footer-banner__item {
     width: 100%;
     height: 17rem;
     overflow: hidden;
@@ -963,7 +963,7 @@ a {
 }
 
 @media (min-width: 768px) {
-    .banner__item {
+    .footer-banner__item {
         width: 50%;
         height: 32rem;
         justify-content: center;
@@ -971,35 +971,32 @@ a {
     }
 }
 
-.banner__item--left {
+.footer-banner__item--left {
     background-image: url('/assets/image/qa_sp.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.banner__item--right {
+.footer-banner__item--right {
     background-image: url('/assets/image/classrooms_sp.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.banner__text {
+.footer-banner__text {
     font-size: 2.2rem;
     font-weight: 700;
     color: #fff;
 }
 
 @media (min-width: 768px) {
-    .banner__text {
+    .footer-banner__text {
         font-size: 3.2rem;
     }
 }
 
-
-
-
-/* フッター -----------------------------------------*/
-.footer {
+/* フッター下方の帯、コピーライト表記 */
+.footer-belt {
     background-color: #DDD;
     height: 8.3rem;
     display: flex;
@@ -1008,12 +1005,14 @@ a {
 }
 
 @media (min-width: 768px) {
-    .footer {
+    .footer-belt {
         height: 12rem;
     }
 }
 
-.footer__copyright {
+.footer-belt__copyright {
     font-size: 1.3rem;
     color: #333;
 }
+
+/* フッターここまで------------------------------------*/
