@@ -972,13 +972,13 @@ a {
 }
 
 .footer-banner__item--left {
-    background-image: url('/assets/image/qa_sp.jpg');
+    background-image: url('../image/qa_pc.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .footer-banner__item--right {
-    background-image: url('/assets/image/classrooms_sp.jpg');
+    background-image: url('../image/classrooms_pc.jpg');
     background-size: cover;
     background-position: center;
 }
