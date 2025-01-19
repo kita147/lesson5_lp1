@@ -56,7 +56,7 @@ html {
 /* スムーススクロール -----------------------------------------*/
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    /*scroll-padding-top: 5rem;*/
 }
 
 /* 全体的な設定 -----------------------------------------*/
@@ -107,6 +107,7 @@ li {
 a {
     text-decoration: none;
     color: inherit;
+    display: block;
 }
 
 /* 共通クラス -----------------------------------------*/
@@ -122,6 +123,10 @@ a {
         padding: 0 2rem;
         margin: 0 auto;
     }
+}
+
+.common__radius--small {
+    border-radius: 1.2rem;
 }
 
 .sp {
@@ -696,6 +701,8 @@ a {
     }
 }
 
+/* コース・目的の容器ここまで -----------------*/
+
 .course__title {
     font-size: 2.8rem;
     font-weight: 700;
@@ -710,6 +717,9 @@ a {
     }
 }
 
+/* コース・目的のタイトルここまで -----------------*/
+
+/*  コース・目的のタブここから--------------------*/
 .course__tabs {
     display: flex;
     justify-content: space-between;
@@ -746,6 +756,9 @@ a {
     color: rgba(51, 51, 51, 1);
 }
 
+/* コース・目的のタブここまで--------------------*/
+
+/* 写真コンテンツここから--------------------*/
 .course__content {
     display: none;
 }
@@ -758,8 +771,6 @@ a {
 .course__list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    flex-wrap: nowrap;
     padding: 2.2rem 1.6rem;
 }
 
@@ -772,53 +783,27 @@ a {
     }
 }
 
-/* 親要素にoverflow: hiddenを設定 */
+/* マウスオーバーで透明度50%、PC版のみ拡大ここから------------*/
 .course__link {
-    display: block;
-    /* 必要に応じて */
     overflow: hidden;
-    /* 枠からはみ出る部分を隠す */
-    position: relative;
-    /* 必要に応じてポジションを指定 */
+    /* はみ出した所は非表示、丸角は別クラスです */
 }
 
-/* マウスオーバー時に画像の透明度を50%に */
-.course__link:hover img {
+
+.course__picture {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /*拡大と透明度のアニメーション付与 */
+}
+
+.course__picture:hover {
     opacity: 0.5;
-    transform: scale(1.2);
-    /* 画像を拡大 */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    /* スムーズに拡大＆透明化 */
-}
-
-/* 通常時の画像設定（縮小・配置用） */
-.course__link img {
-    display: block;
-    /* 必要に応じて */
-    width: 100%;
-    /* 親要素の幅に合わせる */
-    height: auto;
-    /* アスペクト比を維持 */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    /* スムーズな変化 */
-}
-
-.common_radius--small {
-    border-radius: 1.2rem;
 }
 
 /* PC版でのみ適用するスタイル */
 @media (min-width: 1024px) {
-    .course__link:hover img {
+    .course__picture:hover {
         transform: scale(1.2);
-        /* 拡大率を120% */
     }
-}
-
-.course__photo {
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
 }
 
 .course__type-box {
@@ -841,7 +826,14 @@ a {
 .course__type-text {
     font-size: 2rem;
     font-weight: 700;
-    padding: 1.6rem 0;
+    padding: 1.2rem 0;
+    letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+    .course__type-text {
+        padding: 1.6rem 0;
+    }
 }
 
 /* 費用 -----------------------------------------*/
