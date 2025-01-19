@@ -8,6 +8,12 @@ $(document).ready(function () {
   });
 });
 
+// メニュー項目をクリックしたらメニューを閉じる
+$(".header__nav--sp a").on("click", function () {
+  $(".hamburger").removeClass("active"); // hamburgerのactiveクラスを削除
+  $(".header__nav--sp").removeClass("active"); // header__nav--spのactiveクラスを削除
+});
+
 ////// タブメニュー //////
 $(document).ready(function () {
   let tabs = $(".course__tab");
