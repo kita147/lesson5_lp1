@@ -59,6 +59,17 @@ html {
     /*scroll-padding-top: 5rem;*/
 }
 
+/* 変数 -----------------------------------------*/
+:root {
+    --com-lr-pad: 1.6rem;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --com-lr-pad: 2rem;
+    }
+}
+
 /* 全体的な設定 -----------------------------------------*/
 * {
     margin: 0;
@@ -113,7 +124,7 @@ a {
 /* 共通クラス -----------------------------------------*/
 .common_container {
     max-width: 37.5rem;
-    padding: 0 1.6rem;
+    /*padding: 0 1.6rem;*/
     margin: 0 auto;
 }
 
@@ -133,17 +144,9 @@ a {
     display: block;
 }
 
-.pc {
-    display: none;
-}
-
 @media (min-width: 768px) {
     .sp {
         display: none;
-    }
-
-    .pc {
-        display: block;
     }
 }
 
@@ -525,21 +528,28 @@ a {
     }
 }
 
-.hero__button_group {
+/*  ヒーロービュー下のボタンここから--------------------*/
+.hero-button__container {
+    max-width: 37.5rem;
+    padding: 2.4rem var(--com-lr-pad) 1.7rem;
+    margin: 0 auto;
+}
+
+.hero-button_group {
     display: flex;
     flex-direction: column;
     justify-content: center;
     row-gap: 1.2rem;
-    padding: 2.4rem 0 1.7rem;
+    /*padding: 2.4rem 0 1.7rem;*/
     text-align: center;
 }
 
 @media (min-width: 768px) {
-    .hero__button {
+    .hero-button {
         margin-top: -6rem;
     }
 
-    .hero__button_group {
+    .hero-button_group {
         flex-direction: row;
         justify-content: center;
         column-gap: 4rem;
