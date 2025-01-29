@@ -2,25 +2,25 @@
 
 ////// ハンバーガーメニュー //////
 $(document).ready(function () {
-  $(".hamburger").on("click", function () {
-    $(this).toggleClass("active"); // hamburgerにactiveクラスを切り替える
-    $(".header__nav--sp").toggleClass("active"); // header__nav--spにactiveクラスを切り替える
-  });
+    $(".hamburger").on("click", function () {
+        $(this).toggleClass("active"); // hamburgerにactiveクラスを切り替える
+        $(".header__nav--sp").toggleClass("active"); // header__nav--spにactiveクラスを切り替える
+    });
 });
 
 // メニュー項目をクリックしたらメニューを閉じる
 $(".header__nav--sp a").on("click", function () {
-  $(".hamburger").removeClass("active"); // hamburgerのactiveクラスを削除
-  $(".header__nav--sp").removeClass("active"); // header__nav--spのactiveクラスを削除
+    $(".hamburger").removeClass("active"); // hamburgerのactiveクラスを削除
+    $(".header__nav--sp").removeClass("active"); // header__nav--spのactiveクラスを削除
 });
 
 ////// タブメニュー //////
 $(document).ready(function () {
-  let tabs = $(".course__tab");
-  tabs.on("click", function () {
-    $(".active").removeClass("active");
-    $(this).addClass("active");
-    const index = tabs.index(this);
-    $(".course__content").removeClass("show").eq(index).addClass("show");
-  });
+    let tabs = $(".course__tab");
+    tabs.on("click", function () {
+        $(".active").removeClass("active");
+        $(this).addClass("active");
+        const index = tabs.index(this);
+        $(".course__content").removeClass("show").eq(index).addClass("show");
+    });
 });
