@@ -405,7 +405,7 @@ a {
 }
 
 .batch__frame-left {
-    background-image: url(../image/frame_left.svg);
+    background-image: url(/assets/image/frame_left.svg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 2.407rem;
@@ -424,7 +424,7 @@ a {
 }
 
 .batch__frame-right {
-    background-image: url(../image/frame_right.svg);
+    background-image: url(/assets/image/frame_right.svg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 2.408rem;
@@ -443,24 +443,6 @@ a {
 @media (min-width: 768px) {
     .hero__title-lower {
         margin-top: 2.7rem;
-    }
-}
-
-.hero__title-bg-image {
-    width: 14.725rem;
-    height: 6.865rem;
-    background-image: url(../image/frame.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    margin-bottom: 1.8rem;
-}
-
-@media (min-width: 768px) {
-    .hero__title-bg-image {
-        width: 32.521rem;
-        height: 15rem;
-        margin-bottom: 3.2rem;
     }
 }
 
