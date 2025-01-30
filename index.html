@@ -29,7 +29,9 @@
             <div class="header__container">
 
                 <!-- Kira-Kira Juku ロゴマーク -->
-                <a class="header__logo-fxbox" href="/"><img class="header__logo" src="/assets/image/logo.svg" alt="Kira-Kira Juku"></a>
+                <a class="header__logo-fxbox" href="/">
+                    <img class="header__logo" src="/assets/image/logo.svg" alt="Kira-Kira Juku">
+                </a>
 
                 <!-- ハンバーガーメニューの3本線ボタン -->
                 <button class="hamburger" aria-label="メニュー">
@@ -60,7 +62,7 @@
                             </div>
                         </li>
                         <li class="header__list-center">
-                            <a class="button__header" href="/entry">入学説明会に申し込む</a>
+                            <a class="header__button" href="/entry">入学説明会に申し込む</a>
                         </li>
                     </ul>
                 </nav>
@@ -71,9 +73,9 @@
                     <ul class="header__nav-pc--list">
                         <li><a href="#point">選ばれる3つの理由</a></li>
                         <li><a href="#course">コース・目的</a></li>
-                        <li><a href="#price">費用</a></li>
+                        <li><a href="#price">費 用</a></li>
                         <li>
-                            <a class="button__header" href="/entry">入学説明会に申し込む</a>
+                            <a class="header__button" href="/entry">入学説明会に申し込む</a>
                         </li>
                     </ul>
                 </nav>
@@ -91,7 +93,7 @@
                         <div class="batch__frame-left"></div>
                         <div class="batch__title-box">
                             <p class="hero__title-nankan">難関大学の合格実績</p>
-                            <p class="poppins-extrabold-italic hero__title-no">No.<span class="poppins-extrabold-italic hero__title-one">1</span></p>
+                            <p class="hero__title-no">No.<span class="hero__title-one">1</span></p>
                         </div>
                         <div class="batch__frame-right"></div>
                     </div>
@@ -114,35 +116,44 @@
             <!-- ヒーロービュー下のボタンここまで -->
 
             <!-- 選ばれる3つの理由ここから -->
-            <section id="point" class="common_container">
-                <h2 class="popint__title">選ばれる<span class="poppins-bold ">3</span>つの理由</h2>
+            <section id="point" class="point_container">
+                <h2 class="point__title">選ばれる<span class="point__title-num">3</span>つの理由</h2>
 
-                <div class="point__container">
-                    <img class="point__photo common__radius--small" src="/assets/image/point_01_sp.jpg" alt="">
+                <div class="point__inner">
+                    <picture>
+                        <source srcset="/assets/image/point_01_pc.jpg" media="(min-width: 768px)">
+                        <img class="point__photo" src="/assets/image/point_01_sp.jpg" alt="">
+                    </picture>
                     <div class="point__text-box">
-                        <p class="poppins-bold-italic">Point<span> 1</span></p>
-                        <h3>実績のある講師陣だから安心</h3>
-                        <p class="point__text">
+                        <p class="point__text-point">Point<span class="point__text-point-num"> 1</span></p>
+                        <h3 class="point__title-sub">実績のある講師陣だから安心</h3>
+                        <p>
                             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         </p>
                     </div>
                 </div>
-                <div class="point__container reverce">
-                    <div class="point__photo common__radius--small"><img src="/assets/image/point_02_sp.jpg" alt=""></div>
+                <div class="point__inner reverce">
+                    <picture>
+                        <source srcset="/assets/image/point_02_pc.jpg" media="(min-width: 768px)">
+                        <img class="point__photo" src="/assets/image/point_02_sp.jpg" alt="">
+                    </picture>
                     <div class="point__text-box">
-                        <p class="poppins-bold-italic">Point<span> 2</span></p>
-                        <h3>オンラインにも対応だから、早送り巻き戻し視聴できる。</h3>
-                        <p class="point__text">
+                        <p class="point__text-point">Point<span class="point__text-point-num"> 2</span></p>
+                        <h3 class="point__title-sub">オンラインにも対応だから、早送り巻き戻し視聴できる。</h3>
+                        <p>
                             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         </p>
                     </div>
                 </div>
-                <div class="point__container">
-                    <img class="point__photo common__radius--small" src="/assets/image/point_03_sp.jpg" alt="">
+                <div class="point__inner">
+                    <picture>
+                        <source srcset="/assets/image/point_03_pc.jpg" media="(min-width: 768px)">
+                        <img class="point__photo" src="/assets/image/point_03_sp.jpg" alt="">
+                    </picture>
                     <div class="point__text-box">
-                        <p class="poppins-bold-italic">Point<span> 3</span></p>
-                        <h3>徹底した個別指導で、弱点を残さずそれぞれに合わせた大学受験対策。</h3>
-                        <p class="point__text">
+                        <p class="point__text-point">Point<span class="point__text-point-num"> 3</span></p>
+                        <h3 class="point__title-sub">徹底した個別指導で、弱点を残さずそれぞれに合わせた大学受験対策。</h3>
+                        <p>
                             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         </p>
                     </div>
@@ -152,7 +163,7 @@
 
             <!-- 入学説明会に申し込むボタン（共用）ここから -->
             <div class="information">
-                <p>入学ご検討の方は、まずは入学説明会に<br class="sp">お越しください</p>
+                <p class="information__title">入学ご検討の方は、まずは入学説明会に<br class="sp">お越しください</p>
                 <a class="button__information" href="/entry">入学説明会に申し込む</a>
             </div>
             <!-- 入学説明会に申し込むボタン（共用）ここまで -->
