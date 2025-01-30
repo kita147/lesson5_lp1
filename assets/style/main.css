@@ -210,7 +210,7 @@ a {
 }
 
 /* SP表示のナビメニュー（ハンバーガーメニューの中）ここから */
-.header__nav--sp {
+.header__nav-sp {
     position: fixed;
     top: 6.9rem;
     /* 線が入ってしまうので1ピクセル上に配置しています */
@@ -223,11 +223,11 @@ a {
 }
 
 /* activeクラスが付与されたときに画面内にスライドイン */
-.header__nav--sp.active {
+.header__nav-sp.active {
     right: 0;
 }
 
-.header__nav--sp--list {
+.header__nav-sp--list {
     display: flex;
     flex-direction: column;
 }
@@ -261,7 +261,7 @@ a {
     padding: 3rem 0;
 }
 
-.header__nav--sp-box {
+.header__nav-sp-box {
     display: flex;
     align-items: center;
 }
@@ -271,7 +271,7 @@ a {
     margin-right: 1.2rem;
 }
 
-.header__nav--sp-text {
+.header__nav-sp-text {
     font-size: 1.8rem;
     font-weight: 500;
     color: #fff;
@@ -288,32 +288,32 @@ a {
 @media (min-width: 768px) {
 
     .hamburger,
-    .header__nav--sp {
+    .header__nav-sp {
         display: none;
     }
 }
 
-.header__nav--pc {
+.header__nav-pc {
     display: none;
 }
 
 @media (min-width: 768px) {
-    .header__nav--pc {
+    .header__nav-pc {
         display: block;
     }
 
-    .header__nav--pc--list {
+    .header__nav-pc--list {
         display: flex;
         align-items: center;
         column-gap: 4.8rem;
         font-size: 2rem;
     }
 
-    .header__nav--pc--list a {
+    .header__nav-pc--list a {
         font-weight: 500;
     }
 
-    .header__nav--pc--list a:hover {
+    .header__nav-pc--list a:hover {
         color: #0A76E2;
     }
 }
@@ -379,7 +379,7 @@ a {
     }
 }
 
-.batch__title-upper {
+.batch {
     display: flex;
     justify-content: space-between;
     width: 14.725rem;
@@ -387,7 +387,7 @@ a {
 }
 
 @media (min-width: 768px) {
-    .batch__title-upper {
+    .batch {
         width: 32.521rem;
         height: 15rem;
     }
@@ -546,15 +546,15 @@ a {
     }
 }
 
-.color__lightgreen {
+.button__hero--lightgreen {
     background-color: #77CB33;
 }
 
-.color__orange {
+.button__hero--orange {
     background-color: #F6AA00;
 }
 
-.color__cyan {
+.button__hero--cyan {
     background-color: #3AC8AD;
 }
 
