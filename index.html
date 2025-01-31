@@ -169,11 +169,11 @@
             <!-- 入学説明会に申し込むボタン（共用）ここまで -->
 
             <!-- コース・目的ここから -->
-            <section id="course">
+            <section id="course" class="course">
                 <div class="course__container">
                     <h2 class="course__title">コース・目的</h2>
                     <!-- タブのコンテナ -->
-                    <div class="course__tabs">
+                    <div class="course__tab-group">
                         <p class="course__tab active">学年別から選ぶ</p>
                         <p class="course__tab">目的別から選ぶ</p>
                     </div>
@@ -182,8 +182,11 @@
                         <div class="course__list-all">
                             <div class="course__list">
                                 <div>
-                                    <a href="#" class="course__link common__radius--small">
-                                        <img class="course__picture" src="/assets/image/cource_01.jpg" alt="">
+                                    <a href="#" class="course__picture-wrapper">
+                                        <picture>
+                                            <source srcset="/assets/image/cource_01_pc.jpg" media="(min-width: 768px)">
+                                            <img class="course__picture" src="/assets/image/course_01_sp.jpg" alt="">
+                                        </picture>
                                     </a>
                                     <a href="#" class="course__type-box">
                                         <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
@@ -191,8 +194,11 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="#" class="course__link common__radius--small">
-                                        <img class="course__picture" src="/assets/image/cource_02.jpg" alt="">
+                                    <a href="#" class="course__picture-wrapper">
+                                        <picture>
+                                            <source srcset="/assets/image/cource_02_pc.jpg" media="(min-width: 768px)">
+                                            <img class="course__picture" src="/assets/image/course_02_sp.jpg" alt="">
+                                        </picture>
                                     </a>
                                     <a href="#" class="course__type-box">
                                         <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
@@ -202,8 +208,11 @@
                             </div>
                             <div class="course__list">
                                 <div>
-                                    <a href="#" class="course__link common__radius--small">
-                                        <img class="course__picture" src="/assets/image/cource_03.jpg" alt="">
+                                    <a href="#" class="course__picture-wrapper">
+                                        <picture>
+                                            <source srcset="/assets/image/cource_03_pc.jpg" media="(min-width: 768px)">
+                                            <img class="course__picture" src="/assets/image/course_03_sp.jpg" alt="">
+                                        </picture>
                                     </a>
                                     <a href="#" class="course__type-box">
                                         <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
@@ -211,8 +220,11 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <a href="#" class="course__link common__radius--small">
-                                        <img class="course__picture" src="/assets/image/cource_04.jpg" alt="">
+                                    <a href="#" class="course__picture-wrapper">
+                                        <picture>
+                                            <source srcset="/assets/image/cource_04_pc.jpg" media="(min-width: 768px)">
+                                            <img class="course__picture" src="/assets/image/course_04_sp.jpg" alt="">
+                                        </picture>
                                     </a>
                                     <a href="#" class="course__type-box">
                                         <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
@@ -224,44 +236,58 @@
                     </div>
                     <!-- 写真のコンテナ（非アクティブ）-->
                     <div class="course__content">
-                        <div class="course__list">
-                            <div>
-                                <a href="#" class="course__link common__radius--small">
-                                    <img class="course__picture" src="/assets/image/cource_05.jpg" alt="">
-                                </a>
-                                <a href="#" class="course__type-box">
-                                    <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
-                                    <p class="course__type-text">難関大学・医学部合格を目指す</p>
-                                </a>
+                        <div class="course__list-all">
+                            <div class="course__list">
+                                <div>
+                                    <a href="#" class="course__picture-wrapper">
+                                        <picture>
+                                            <source srcset="/assets/image/cource_05_pc.jpg" media="(min-width: 768px)">
+                                            <img class="course__picture" src="/assets/image/course_05_sp.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <a href="#" class="course__type-box">
+                                        <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
+                                        <p class="course__type-text">難関大学・医学部合格を目指す</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="course__picture-wrapper">
+                                        <picture>
+                                            <source srcset="/assets/image/cource_06_pc.jpg" media="(min-width: 768px)">
+                                            <img class="course__picture" src="/assets/image/course_06_sp.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <a href="#" class="course__type-box">
+                                        <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
+                                        <p class="course__type-text">名門私立大学合格を目指す</p>
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <a href="#" class="course__link common__radius--small">
-                                    <img class="course__picture" src="/assets/image/cource_06.jpg" alt="">
-                                </a>
-                                <a href="#" class="course__type-box">
-                                    <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
-                                    <p class="course__type-text">名門私立大学合格を目指す</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="course__list">
-                            <div>
-                                <a href="#" class="course__link common__radius--small">
-                                    <img class="course__picture" src="/assets/image/cource_07.jpg" alt="">
-                                </a>
-                                <a href="#" class="course__type-box">
-                                    <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
-                                    <p class="course__type-text">国公立大学合格を目指す</p>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" class="course__link common__radius--small">
-                                    <img class="course__picture" src="/assets/image/cource_08.jpg" alt="">
-                                </a>
-                                <a href="#" class="course__type-box">
-                                    <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
-                                    <p class="course__type-text">海外の大学合格を目指す</p>
-                                </a>
+                            <div class="course__list">
+                                <div>
+                                    <a href="#" class="course__picture-wrapper">
+                                        <picture>
+                                            <source srcset="/assets/image/cource_07_pc.jpg" media="(min-width: 768px)">
+                                            <img class="course__picture" src="/assets/image/course_07_sp.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <a href="#" class="course__type-box">
+                                        <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
+                                        <p class="course__type-text">国公立大学合格を目指す</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="course__picture-wrapper">
+                                        <picture>
+                                            <source srcset="/assets/image/cource_08_pc.jpg" media="(min-width: 768px)">
+                                            <img class="course__picture" src="/assets/image/course_08_sp.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                    <a href="#" class="course__type-box">
+                                        <img class="course__type-arrow" src="/assets/image/arrow_right.svg" alt="">
+                                        <p class="course__type-text">海外の大学合格を目指す</p>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
