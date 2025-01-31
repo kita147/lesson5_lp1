@@ -109,21 +109,6 @@ a {
     display: block;
 }
 
-/* 共通クラス -----------------------------------------*/
-.common_container {
-    max-width: 37.5rem;
-    padding: 0 1.6rem;
-    margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-    .common_container {
-        max-width: 120rem;
-        padding: 0 2rem;
-        margin: 0 auto;
-    }
-}
-
 /* ヘッダー -----------------------------------------*/
 .header {
     background-color: #fff;
@@ -493,7 +478,22 @@ a {
     }
 }
 
-.hero__button_group {
+
+/* ヒーロービュー下のボタン（ガイド） ----------------------------------*/
+.guide__container {
+    max-width: 37.5rem;
+    padding: 0 1.6rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .guide__container {
+        max-width: 120rem;
+        padding: 0 30rem;
+    }
+}
+
+.guide__group {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -503,11 +503,7 @@ a {
 }
 
 @media (min-width: 768px) {
-    .hero__button {
-        margin-top: -6.4rem;
-    }
-
-    .hero__button_group {
+    .guide__group {
         flex-direction: row;
         justify-content: center;
         column-gap: 4rem;
@@ -515,7 +511,7 @@ a {
     }
 }
 
-.button__hero {
+.guide__button {
     display: inline-block;
     width: 25rem;
     height: 4.8rem;
@@ -531,28 +527,28 @@ a {
 }
 
 @media (min-width: 768px) {
-    .button__hero {
+    .guide__button {
         width: 34rem;
         height: 7.5rem;
         font-size: 2.4rem;
         border-radius: 3.8rem;
         line-height: 7.5rem;
     }
-
-    .button__hero:hover {
-        opacity: 0.7;
-    }
 }
 
-.button__hero--lightgreen {
+.guide__button:hover {
+    opacity: 0.7;
+}
+
+.guide__button--lightgreen {
     background-color: #77CB33;
 }
 
-.button__hero--orange {
+.guide__button--orange {
     background-color: #F6AA00;
 }
 
-.button__hero--cyan {
+.guide__button--cyan {
     background-color: #3AC8AD;
 }
 
@@ -905,12 +901,16 @@ a {
 }
 
 /* 費用 -----------------------------------------*/
-.price__vertical-padding {
-    padding: 6.1rem 0 6.7rem;
+.price__container {
+    max-width: 37.5rem;
+    padding: 6rem 1.6rem 6.1rem;
+    margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-    .price__vertical-padding {
+    .price__container {
+        max-width: 120rem;
+        padding: 0 30rem;
         padding: 6.7rem 0 6.3rem;
     }
 }
@@ -919,7 +919,8 @@ a {
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 2.3rem;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -930,7 +931,7 @@ a {
 }
 
 /* 費用の表ここから ---------*/
-.price-table {
+.price__table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
@@ -938,39 +939,42 @@ a {
 }
 
 @media (min-width: 768px) {
-    .price-table {
+    .price__table {
         width: 60rem;
         margin: 0 auto;
     }
 }
 
-.price-table__header {
+.price__header {
     background-color: #F5F5F5;
     font-size: 1.6rem;
     font-weight: 400;
-    padding: 2rem 2.5rem;
     border: 1px solid #CCCCCC;
     text-align: center;
+    padding: 2.3rem;
+    line-height: 1;
 }
 
 @media (min-width: 768px) {
-    .price-table__header {
+    .price__header {
         font-size: 1.8rem;
     }
 }
 
-.price-table__header--first {
+.price__header-no-border--right {
     border-right: none;
 }
 
-.price-table__header--second {
+.price__header-no-border--left {
     border-left: none;
 }
 
-.price-table td {
-    padding: 10px;
+.price__data {
     border: 1px solid #CCCCCC;
     text-align: center;
+    vertical-align: middle;
+    padding: 1.7rem;
+    line-height: 1;
 }
 
 .price__unique-font--number {
@@ -1014,25 +1018,31 @@ a {
 }
 
 /* 画像の透明度と拡大のアニメーションここから --------------------*/
-.footer-banner__picture {
+.footer-banner__wrapper {
     cursor: pointer;
     overflow: hidden;
     position: relative;
     width: 100%;
 }
 
-.footer-banner__picture img {
-    height: auto;
+.footer-banner__picture {
+    height: 17rem;
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 1;
 }
 
-.footer-banner__picture:hover img {
+.footer-banner__picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.footer-banner__picture:hover {
     opacity: 0.5;
 }
 
 @media (min-width: 768px) {
-    .footer-banner__picture:hover img {
+    .footer-banner__picture:hover {
         transform: scale(1.2);
     }
 }

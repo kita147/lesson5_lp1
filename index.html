@@ -106,11 +106,11 @@
             <!-- ヒーロービューここまで -->
 
             <!-- ヒーロービュー下のボタンここから -->
-            <div class="hero__button common_container">
-                <ul class="hero__button_group">
-                    <li><a class="button__hero button__hero--lightgreen" onclick="location.href='/inquiry'">入学のお問い合わせ</a></li>
-                    <li><a class="button__hero button__hero--orange" onclick="location.href='/freetrial'">無料体験に申し込む</a></li>
-                    <li><a class="button__hero button__hero--cyan" onclick="location.href='/request'">資料請求する</a></li>
+            <div class="guide__container">
+                <ul class="guide__group">
+                    <li><a class="guide__button guide__button--lightgreen" onclick="location.href='/inquiry'">入学のお問い合わせ</a></li>
+                    <li><a class="guide__button guide__button--orange" onclick="location.href='/freetrial'">無料体験に申し込む</a></li>
+                    <li><a class="guide__button guide__button--cyan" onclick="location.href='/request'">資料請求する</a></li>
                 </ul>
             </div>
             <!-- ヒーロービュー下のボタンここまで -->
@@ -303,40 +303,40 @@
             <!-- 入学説明会に申し込むボタン（共用）ここまで -->
 
             <!-- 費用ここから -->
-            <section id="price" class="common_container">
-                <div class="price__vertical-padding">
+            <section id="price" class="price">
+                <div class="price__container">
                     <h2 class="price__title">費 用</h2>
-                    <table class="price-table">
+                    <table class="price__table">
                         <thead>
                             <tr>
-                                <th class="price-table__header price-table__header--first">年間講数</th>
-                                <th class="price-table__header price-table__header--second">年間授業料（税込み）</th>
+                                <th class="price__header price__header-no-border--right">年間講数</th>
+                                <th class="price__header price__header-no-border--left">年間授業料（税込み）</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>5講</td>
-                                <td class="price__unique-font--number">24,500<span class="price__unique-font--yen">円</span></td>
+                                <td class="price__data">5講</td>
+                                <td class="price__data price__unique-font--number">24,500<span class="price__unique-font--yen">円</span></td>
                             </tr>
                             <tr>
-                                <td>10講</td>
-                                <td class="price__unique-font--number">49,000<span class="price__unique-font--yen">円</span></td>
+                                <td class="price__data">10講</td>
+                                <td class="price__data price__unique-font--number">49,000<span class="price__unique-font--yen">円</span></td>
                             </tr>
                             <tr>
-                                <td>11講</td>
-                                <td class="price__unique-font--number">53,900<span class="price__unique-font--yen">円</span></td>
+                                <td class="price__data">11講</td>
+                                <td class="price__data price__unique-font--number">53,900<span class="price__unique-font--yen">円</span></td>
                             </tr>
                             <tr>
-                                <td>12講</td>
-                                <td class="price__unique-font--number">58,800<span class="price__unique-font--yen">円</span></td>
+                                <td class="price__data">12講</td>
+                                <td class="price__data price__unique-font--number">58,800<span class="price__unique-font--yen">円</span></td>
                             </tr>
                             <tr>
-                                <td>22講</td>
-                                <td class="price__unique-font--number">107,800<span class="price__unique-font--yen">円</span></td>
+                                <td class="price__data">22講</td>
+                                <td class="price__data price__unique-font--number">107,800<span class="price__unique-font--yen">円</span></td>
                             </tr>
                             <tr>
-                                <td>24講</td>
-                                <td class="price__unique-font--number">117,600<span class="price__unique-font--yen">円</span></td>
+                                <td class="price__data">24講</td>
+                                <td class="price__data price__unique-font--number">117,600<span class="price__unique-font--yen">円</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -358,15 +358,15 @@
 
             <!-- よくある質問と近くの教室を探すバナーここから -->
             <div class="footer-banner">
-                <div class="footer-banner__picture">
+                <div class="footer-banner__wrapper">
                     <a href="/faq">
-                        <img src="/assets/image/qa_pc.jpg" alt="">
+                        <img class="footer-banner__picture" src="/assets/image/qa_pc.jpg" alt="">
                     </a>
                     <p class="footer-banner__text">よくあるご質問</p>
                 </div>
-                <div class="footer-banner__picture">
+                <div class="footer-banner__wrapper">
                     <a href="/search">
-                        <img src="/assets/image/classrooms_pc.jpg" alt="">
+                        <img class="footer-banner__picture" src="/assets/image/classrooms_pc.jpg" alt="">
                     </a>
                     <p class="footer-banner__text">お近くの教室を探す</p>
                 </div>
