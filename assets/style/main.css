@@ -507,7 +507,8 @@ a {
         flex-direction: row;
         justify-content: center;
         column-gap: 4rem;
-        padding: 2.4rem 0 8.2rem;
+        padding: 2.4rem 0 8.3rem;
+        margin-top: -6.5rem;
     }
 }
 
@@ -562,7 +563,7 @@ a {
 @media (min-width: 768px) {
     .point_container {
         max-width: 120rem;
-        padding: 0 2rem 2.2rem;
+        padding: 0 2rem 2.6rem;
         margin: 0 auto;
     }
 }
@@ -578,7 +579,7 @@ a {
 @media (min-width: 768px) {
     .point__title {
         font-size: 3.6rem;
-        margin-bottom: 4.3rem;
+        margin-bottom: 4.2rem;
     }
 }
 
@@ -610,7 +611,7 @@ a {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        margin-bottom: 3.3rem;
+        margin-bottom: 3.2rem;
     }
 
     .reverce {
@@ -657,7 +658,7 @@ a {
 @media (min-width: 768px) {
     .point__text-point {
         font-size: 2.8rem;
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.6rem;
     }
 }
 
@@ -687,7 +688,7 @@ a {
     .point__title-sub {
         font-size: 2.4rem;
         line-height: 1.75;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.4rem;
     }
 }
 
@@ -708,7 +709,23 @@ a {
     margin-bottom: 1rem;
 }
 
-.button__information {
+@media (min-width: 768px) {
+    .information__title {
+        margin-bottom: 1.8rem;
+    }
+}
+
+.information__sp {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .information__sp {
+        display: none;
+    }
+}
+
+.nformation__button {
     display: inline-block;
     width: 30.5rem;
     height: 6.9rem;
@@ -724,7 +741,7 @@ a {
 }
 
 @media (min-width: 768px) {
-    .button__information {
+    .nformation__button {
         width: 36rem;
         height: 7.5rem;
         line-height: 7.5rem;
@@ -735,7 +752,7 @@ a {
 }
 
 /* ボタンのホバー効果 */
-.button__information:hover {
+.nformation__button:hover {
     opacity: 0.8;
 }
 
@@ -747,7 +764,7 @@ a {
 
 @media (min-width: 768px) {
     .course {
-        margin: 7.2rem 0 2rem;
+        margin: 6.8rem 0 2rem;
     }
 }
 
@@ -775,7 +792,8 @@ a {
 @media (min-width: 768px) {
     .course__title {
         font-size: 3.6rem;
-        margin-bottom: 2.8rem;
+        padding-left: 0;
+        margin-bottom: 2.6rem;
     }
 }
 
@@ -832,6 +850,13 @@ a {
     padding: 2.7rem 1.6rem;
 }
 
+@media (min-width: 768px) {
+    .course__list-all {
+        padding: 2.8rem 3.2rem 1rem;
+        border-radius: 0 0 1.2rem 1.2rem;
+    }
+}
+
 .course__list {
     display: flex;
     flex-direction: column;
@@ -841,8 +866,6 @@ a {
     .course__list {
         flex-direction: row;
         justify-content: space-between;
-        padding: 3.2rem;
-        column-gap: 3.1rem;
     }
 }
 
@@ -878,7 +901,7 @@ a {
 
 @media (min-width: 1024px) {
     .course__type-box {
-        padding: 1.6rem 0;
+        padding: 1.5rem 0 3.6rem;
     }
 }
 
@@ -890,7 +913,7 @@ a {
 @media (min-width: 768px) {
     .course__type-arrow {
         width: 1.731rem;
-        margin-right: 1.4rem;
+        margin-right: 1.1rem;
     }
 }
 
