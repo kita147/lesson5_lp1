@@ -646,7 +646,7 @@ a {
 }
 
 .point__photo {
-    width: 100%;
+    width: 34.3rem;
     object-fit: cover;
     overflow: hidden;
     margin-bottom: 1.6rem;
@@ -875,12 +875,13 @@ a {
 
 /* マウスオーバーで透明度50%、PC版のみ拡大ここから------------*/
 .course__picture-wrapper {
+    border-radius: 1.2rem;
     overflow: hidden;
     /* 拡大ではみ出した所は非表示 */
 }
 
 .course__picture {
-    border-radius: 1.2rem;
+    /*border-radius: 1.2rem;*/
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
