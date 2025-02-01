@@ -1013,10 +1013,12 @@ a {
 
 .price__header-right {
     border-right: none;
+        width: 11.4rem;
 }
 
 .price__header-left {
     border-left: none;
+    padding-right: 3.5rem;
 }
 
 @media (min-width: 768px) {
@@ -1027,6 +1029,7 @@ a {
 
     .price__header-left {
         border: 1px solid #CCCCCC;
+        padding-right: 2.8rem;
     }
 }
 
@@ -1034,7 +1037,7 @@ a {
     border: 1px solid #CCCCCC;
     text-align: center;
     vertical-align: middle;
-    padding: 1.7rem;
+    padding: 1.7rem 1.9rem;
     line-height: 1;
 }
 
@@ -1091,7 +1094,7 @@ a {
     width: 100%;
     cursor: pointer;
     overflow: hidden;
-    position: relative; /* テキストを絶対配置するため */
+    position: relative;
 }
 
 @media (min-width: 768px) {
@@ -1100,14 +1103,14 @@ a {
     }
 }
 
-/* SP版（デフォルト）で背景画像を設定 */
+/* 背景画像を設定 */
 .footer-banner__picture-left,
 .footer-banner__picture-right {
     position: relative;
     display: block;
     height: 17rem;
     background-size: cover;
-    background-position: center;
+    background-position: left;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -1119,7 +1122,7 @@ a {
     background-image: url(/assets/image/classrooms_sp.jpg);
 }
 
-/* 擬似要素を使って白系の透明度アニメーション */
+/* 透明度アニメーション */
 .footer-banner__picture-left::before,
 .footer-banner__picture-right::before {
     content: "";
@@ -1132,53 +1135,54 @@ a {
     transition: background-color 0.3s ease;
 }
 
-/* ホバー時に白系のエフェクトを適用 */
+/* ホバー時の効果 */
 .footer-banner__picture-left:hover::before,
 .footer-banner__picture-right:hover::before {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* PC版で画像変更 & 拡大エフェクト */
+/* PC版で画像変更 */
 @media (min-width: 768px) {
     .footer-banner__picture-left {
         height: 32rem;
         background-image: url(/assets/image/qa_pc.jpg);
+        background-position: center;
     }
 
     .footer-banner__picture-right {
         height: 32rem;
         background-image: url(/assets/image/classrooms_pc.jpg);
+        background-position: center;
     }
 
-    /* PC時に画像のみ拡大（テキストは影響を受けない） */
+    /* PC版で画像のみ拡大 */
     .footer-banner__picture-left:hover,
     .footer-banner__picture-right:hover {
         transform: scale(1.2);
     }
 }
 
-/* バナー画像上のテキスト（画像の拡大の影響を受けない） */
+/* バナー画像上のテキスト */
 .footer-banner__text {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 親要素の中央に配置 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    left: 1.6rem;
+    transform: translateY(-50%);
     font-size: 2.2rem;
     font-weight: 700;
     color: #fff;
-    z-index: 10; /* 画像より上に配置 */
-    pointer-events: none; /* テキストのクリックを無効化（リンクを押しやすくする） */
+    z-index: 10;
 }
 
 @media (min-width: 768px) {
     .footer-banner__text {
         font-size: 3.2rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
+
 
 
 /* フッター下方の帯、コピーライト表記 */
@@ -1203,6 +1207,12 @@ a {
     font-size: 1.3rem;
     color: #333;
     padding-left: 1.3rem;
+}
+
+@media (min-width: 768px) {
+    .footer-belt__copyright {
+        padding-left: 0;
+    }
 }
 
 /* フッターここまで------------------------------------*/
