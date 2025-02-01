@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400,500,700,900&family=Noto+Serif+JP&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,700;1,800&display=swap');
 
-.poppins-regular {
+/*.poppins-regular {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
@@ -30,7 +30,7 @@
     font-weight: 800;
     font-style: italic;
     color: #F11F8D;
-}
+}*/
 
 
 
@@ -74,7 +74,9 @@ body {
     color: #333;
 }
 
+tr,
 th,
+td,
 p,
 h1,
 h2,
@@ -701,7 +703,7 @@ a {
 
 @media (min-width: 768px) {
     .information {
-        padding: 5.4rem 0 5.5rem;
+        padding: 5.4rem 0 5.6rem;
     }
 }
 
@@ -764,7 +766,7 @@ a {
 
 @media (min-width: 768px) {
     .course {
-        margin: 6.8rem 0 7.3rem;
+        margin: 6.8rem 0 7.2rem;
     }
 }
 
@@ -922,7 +924,7 @@ a {
 
 @media (min-width: 1024px) {
     .course__type-box {
-        padding: 1.5rem 0 0;
+        padding: 1.4rem 0 0;
     }
 }
 
@@ -945,9 +947,19 @@ a {
 }
 
 /* 費用 -----------------------------------------*/
+.price {
+    margin: 6rem 0 6.1rem;
+}
+
+@media (min-width: 768px) {
+    .price {
+        margin: 6.7rem 0 6.9rem;
+    }
+}
+
 .price__container {
     max-width: 37.5rem;
-    padding: 6rem 1.6rem 6.1rem;
+    padding: 0 1.6rem;
     margin: 0 auto;
 }
 
@@ -955,7 +967,6 @@ a {
     .price__container {
         max-width: 120rem;
         padding: 0 30rem;
-        padding: 6.7rem 0 6.3rem;
     }
 }
 
@@ -970,7 +981,8 @@ a {
 @media (min-width: 768px) {
     .price__title {
         font-size: 3.6rem;
-        margin-bottom: 3.2rem;
+        padding-left: 0;
+        margin-bottom: 2.7rem;
     }
 }
 
@@ -982,14 +994,7 @@ a {
     border: 3px solid #CCCCCC;
 }
 
-@media (min-width: 768px) {
-    .price__table {
-        width: 60rem;
-        margin: 0 auto;
-    }
-}
-
-.price__header {
+.price__header-all {
     background-color: #F5F5F5;
     font-size: 1.6rem;
     font-weight: 400;
@@ -1000,17 +1005,29 @@ a {
 }
 
 @media (min-width: 768px) {
-    .price__header {
+    .price__header-all {
         font-size: 1.8rem;
+        padding: 2.7rem;
     }
 }
 
-.price__header-no-border--right {
+.price__header-right {
     border-right: none;
 }
 
-.price__header-no-border--left {
+.price__header-left {
     border-left: none;
+}
+
+@media (min-width: 768px) {
+    .price__header-right {
+        border: 1px solid #CCCCCC;
+        width: 14.2rem;
+    }
+
+    .price__header-left {
+        border: 1px solid #CCCCCC;
+    }
 }
 
 .price__data {
@@ -1019,6 +1036,13 @@ a {
     vertical-align: middle;
     padding: 1.7rem;
     line-height: 1;
+}
+
+@media (min-width: 768px) {
+    .price__data {
+        font-size: 1.8rem;
+        padding: 2.2rem;
+    }
 }
 
 .price__unique-font--number {
@@ -1058,64 +1082,104 @@ a {
 @media (min-width: 768px) {
     .footer-banner {
         flex-direction: row;
+        align-items: flex-start;
     }
 }
 
-/* 画像の透明度と拡大のアニメーションここから --------------------*/
+/* 画像の透明度と拡大のアニメーション */
 .footer-banner__wrapper {
+    width: 100%;
     cursor: pointer;
     overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-
-.footer-banner__picture {
-    height: 17rem;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 1;
-}
-
-.footer-banner__picture img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.footer-banner__picture:hover {
-    opacity: 0.5;
+    position: relative; /* テキストを絶対配置するため */
 }
 
 @media (min-width: 768px) {
-    .footer-banner__picture:hover {
+    .footer-banner__wrapper {
+        width: 50%;
+    }
+}
+
+/* SP版（デフォルト）で背景画像を設定 */
+.footer-banner__picture-left,
+.footer-banner__picture-right {
+    position: relative;
+    display: block;
+    height: 17rem;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-banner__picture-left {
+    background-image: url(/assets/image/qa_sp.jpg);
+}
+
+.footer-banner__picture-right {
+    background-image: url(/assets/image/classrooms_sp.jpg);
+}
+
+/* 擬似要素を使って白系の透明度アニメーション */
+.footer-banner__picture-left::before,
+.footer-banner__picture-right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.3s ease;
+}
+
+/* ホバー時に白系のエフェクトを適用 */
+.footer-banner__picture-left:hover::before,
+.footer-banner__picture-right:hover::before {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* PC版で画像変更 & 拡大エフェクト */
+@media (min-width: 768px) {
+    .footer-banner__picture-left {
+        height: 32rem;
+        background-image: url(/assets/image/qa_pc.jpg);
+    }
+
+    .footer-banner__picture-right {
+        height: 32rem;
+        background-image: url(/assets/image/classrooms_pc.jpg);
+    }
+
+    /* PC時に画像のみ拡大（テキストは影響を受けない） */
+    .footer-banner__picture-left:hover,
+    .footer-banner__picture-right:hover {
         transform: scale(1.2);
     }
 }
 
-/* 画像の透明度と拡大のアニメーションここまで --------------------*/
-
-/* バナー画像上のテキスト */
+/* バナー画像上のテキスト（画像の拡大の影響を受けない） */
 .footer-banner__text {
-    align-items: center;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-start;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding-left: 1.6rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 親要素の中央に配置 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     font-size: 2.2rem;
     font-weight: 700;
     color: #fff;
+    z-index: 10; /* 画像より上に配置 */
+    pointer-events: none; /* テキストのクリックを無効化（リンクを押しやすくする） */
 }
 
 @media (min-width: 768px) {
     .footer-banner__text {
         font-size: 3.2rem;
-        justify-content: center;
-        padding: 0;
     }
 }
+
 
 /* フッター下方の帯、コピーライト表記 */
 .footer-belt {
@@ -1133,8 +1197,12 @@ a {
 }
 
 .footer-belt__copyright {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.3rem;
     color: #333;
+    padding-left: 1.3rem;
 }
 
 /* フッターここまで------------------------------------*/
