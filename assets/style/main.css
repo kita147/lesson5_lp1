@@ -226,7 +226,7 @@ a {
 /* ハンバーガーメニューの中ここから */
 .header__list-left {
     border-bottom: solid 1px rgba(255, 255, 255, 0.5);
-    padding: 1.8rem 0;
+    padding: 1.8rem 0 1.7rem;
 }
 
 .header__list-center {
@@ -242,7 +242,7 @@ a {
 
 .header__arrow {
     width: 1.4rem;
-    margin-right: 1.2rem;
+    margin-right: 1.5rem;
 }
 
 .header__nav-sp-text {
