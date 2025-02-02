@@ -107,7 +107,7 @@ a {
     }
 }
 
-.header__logo-fxbox {
+.header__logo-wrapper {
     display: flex;
     align-items: center;
 }
@@ -160,7 +160,7 @@ a {
     right: 0;
 }
 
-.header__nav-sp--list {
+.header__list-sp {
     display: flex;
     flex-direction: column;
 }
@@ -189,12 +189,12 @@ a {
 }
 
 /* ハンバーガーメニューの中ここから */
-.header__list-left {
+.header__list-sp--left {
     border-bottom: solid 1px rgba(255, 255, 255, 0.5);
     padding: 1.8rem 0 1.7rem;
 }
 
-.header__list-center {
+.header__list-sp--center {
     display: flex;
     justify-content: center;
     padding: 3rem 0;
@@ -240,19 +240,16 @@ a {
         display: block;
     }
 
-    .header__nav-pc--list {
+    .header__list-pc {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         column-gap: 4.8rem;
         font-size: 2rem;
-    }
-
-    .header__nav-pc--list a {
         font-weight: 500;
     }
 
-    .header__nav-pc--list a:hover {
+    .header__list-pc a:hover {
         color: #0A76E2;
     }
 }
@@ -531,14 +528,14 @@ a {
     }
 }
 
-.point_container {
+.point__container {
     max-width: 37.5rem;
     padding: 0 1.6rem;
     margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-    .point_container {
+    .point__container {
         max-width: 120rem;
         padding: 0 2rem;
     }
@@ -590,7 +587,7 @@ a {
         padding-bottom: 3.2rem;
     }
 
-    .point__content-reverce {
+    .point__content--reverce {
         flex-direction: row-reverse;
     }
 }
@@ -703,7 +700,7 @@ a {
     }
 }
 
-.nformation__button {
+.information__button {
     display: inline-block;
     width: 30.5rem;
     height: 6.9rem;
@@ -719,7 +716,7 @@ a {
 }
 
 @media (min-width: 768px) {
-    .nformation__button {
+    .information__button {
         width: 36rem;
         height: 7.5rem;
         line-height: 7.5rem;
@@ -730,7 +727,7 @@ a {
 }
 
 /* ボタンのホバー効果 */
-.nformation__button:hover {
+.information__button:hover {
     opacity: 0.5;
 }
 
