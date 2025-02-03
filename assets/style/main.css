@@ -1024,6 +1024,7 @@ a {
     font-weight: 700;
     font-style: normal;
     color: #F11F8D;
+    padding-left: 1rem;
 }
 
 .price__unique-font--yen {
@@ -1036,6 +1037,7 @@ a {
 @media (min-width: 768px) {
     .price__unique-font--number {
         font-size: 3.2rem;
+        padding-left: 2.2rem;
     }
 
     .price__unique-font--yen {
