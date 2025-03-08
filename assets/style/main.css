@@ -166,23 +166,6 @@ a {
 }
 
 /* ヘッダーの「入学説明会に申し込む」ボタン */
-.header__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-width: 10rem;
-    height: 6.6rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #005BAC;
-    background: #fff;
-    border-radius: 3.8rem;
-    cursor: pointer;
-    line-height: normal;
-}
-
-/* ハンバーガーメニューの中ここから */
 .header__list-sp--left {
     border-bottom: solid 1px rgba(255, 255, 255, 0.5);
     padding: 1.8rem 0 1.7rem;
@@ -210,11 +193,27 @@ a {
     color: #fff;
 }
 
-/* ボタンのホバー効果 */
-.header__button:hover {
-    opacity: 0.5;
+.header__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 10rem;
+    height: 6.6rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #005BAC;
+    background: #fff;
+    border-radius: 3.8rem;
+    cursor: pointer;
+    line-height: normal;
+    transition: opacity 0.2s ease;
 }
 
+/* ボタンのホバー効果 */
+.header__button:hover {
+    opacity: 0.7;
+}
 /* ハンバーガーメニューの中ここまで */
 
 /* PC表示のときはハンバーガーボタンとナビメニューを隠す */
@@ -234,7 +233,7 @@ a {
         display: block;
     }
 
-    .header__list-pc {
+    .header__list-pc-box {
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -243,13 +242,13 @@ a {
         font-weight: 500;
     }
 
-    .header__list-pc a:hover {
+    .header__link-color:hover {
         color: #0A76E2;
     }
 }
 
 @media (min-width: 768px) {
-    .header__button {
+    .header__button-pc {
         display: inline-block;
         width: 28.2rem;
         height: 6.1rem;
@@ -261,10 +260,10 @@ a {
         border-radius: 3.8rem;
         text-align: center;
         cursor: pointer;
-        transition: opacity 0.2s;
+        transition: opacity 0.2s ease;
     }
 
-    .header__button:hover {
+    .header__button-pc:hover {
         opacity: 0.7;
     }
 }
@@ -479,11 +478,10 @@ a {
     font-size: 1.6rem;
     font-weight: 700;
     color: #fff;
-    background: #333;
     border-radius: 2.5rem;
     text-align: center;
     cursor: pointer;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s ease;
 }
 
 @media (min-width: 768px) {
@@ -675,13 +673,26 @@ a {
     }
 }
 
-.information__title{
+.information__title {
     margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
     .information__title {
         margin-bottom: 1.8rem;
+    }
+}
+
+.information__box {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .information__box {
+        flex-direction: row;
+        justify-content: center;
     }
 }
 
@@ -707,7 +718,7 @@ a {
     border-radius: 3.8rem;
     text-align: center;
     cursor: pointer;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s ease;
 }
 
 @media (min-width: 768px) {
@@ -716,16 +727,33 @@ a {
         height: 7.5rem;
         line-height: 7.5rem;
         font-size: 2.4rem;
-        text-align: center;
         padding-left: 2rem;
     }
 }
 
 /* ボタンのホバー効果 */
 .information__button:hover {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
+.guide__button--large {
+    width: 30.5rem;
+    height: 6.9rem;
+    line-height: 6.9rem;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 3.8rem;
+}
+
+@media (min-width: 768px) {
+    .guide__button--large {
+        width: 36rem;
+        height: 7.5rem;
+        line-height: 7.5rem;
+        font-size: 2.4rem;
+        padding-left: 2rem;
+    }
+}
 
 /* コース・目的 -----------------------------------------*/
 .course {
